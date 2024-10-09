@@ -31,18 +31,20 @@
             panel1 = new Panel();
             BtnPayMode = new Button();
             pictureBox1 = new PictureBox();
+            BtnExit = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(BtnExit);
             panel1.Controls.Add(BtnPayMode);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 450);
+            panel1.Size = new Size(237, 450);
             panel1.TabIndex = 0;
             // 
             // BtnPayMode
@@ -51,7 +53,7 @@
             BtnPayMode.BackgroundImageLayout = ImageLayout.Zoom;
             BtnPayMode.Location = new Point(0, 81);
             BtnPayMode.Name = "BtnPayMode";
-            BtnPayMode.Size = new Size(300, 124);
+            BtnPayMode.Size = new Size(237, 124);
             BtnPayMode.TabIndex = 1;
             BtnPayMode.UseVisualStyleBackColor = true;
             // 
@@ -60,10 +62,21 @@
             pictureBox1.Image = Properties.Resources.sell;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(300, 75);
+            pictureBox1.Size = new Size(237, 75);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            // 
+            // BtnExit
+            // 
+            BtnExit.BackgroundImage = Properties.Resources.salida;
+            BtnExit.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnExit.Dock = DockStyle.Bottom;
+            BtnExit.Location = new Point(0, 390);
+            BtnExit.Name = "BtnExit";
+            BtnExit.Size = new Size(237, 60);
+            BtnExit.TabIndex = 2;
+            BtnExit.UseVisualStyleBackColor = true;
             // 
             // MainView
             // 
@@ -85,5 +98,6 @@
         private Panel panel1;
         private Button BtnPayMode;
         private PictureBox pictureBox1;
+        private Button BtnExit;
     }
 }
