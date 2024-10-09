@@ -43,7 +43,21 @@ namespace Supermarket_mvp.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
-        }
+
+            //Agregar llame el evento AddNewEvent cuando se haga clic en el boton BtnNew
+            BtnNew.Click += delegate {
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+
+            tabControl1.TabPages.Remove(tabPagePayModeList);
+            tabControl1.TabPages.Add(tabPagePayModeDetail);
+            tabPagePayModeDetail.Text = "Add New Pay Mode";
+            };
+
+            BtnEdit.Click += delegate { EditEvent?.Invoke(this, EventArgs.Empty); };
+            BtnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
+            BtnSave.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); };
+            BtnCancelar.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
+        } 
 
         public string PayModeId
         {
