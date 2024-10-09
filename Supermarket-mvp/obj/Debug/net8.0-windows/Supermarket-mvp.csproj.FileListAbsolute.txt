@@ -53,3 +53,4 @@ C:\Users\LENOVO\Documents\C#\Visual2022\Supermarket-mvp\Supermarket-mvp\bin\Debu
 C:\Users\LENOVO\Documents\C#\Visual2022\Supermarket-mvp\Supermarket-mvp\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\LENOVO\Documents\C#\Visual2022\Supermarket-mvp\Supermarket-mvp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
 C:\Users\LENOVO\Documents\C#\Visual2022\Supermarket-mvp\Supermarket-mvp\obj\Debug\net8.0-windows\Supermar.FBD2E1F5.Up2Date
+C:\Users\LENOVO\Documents\C#\Visual2022\Supermarket-mvp\Supermarket-mvp\obj\Debug\net8.0-windows\Supermarket_mvp.Views.MainView.resources
