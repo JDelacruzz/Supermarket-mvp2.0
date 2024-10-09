@@ -8,5 +8,23 @@ namespace Supermarket_mvp.Views
 {
     internal interface IPayModeView
     {
+        string PayModeId { get; set; }
+        string PayModeName { get; set; }
+        string PayModeObervation { get; set; }
+
+        string SearchValue { get; set; }
+        bool IsEdit { get; set; }
+        bool IsSuccesfull { get; set; }
+        string Message { get; set; }
+
+        event EventHandler SearchEvent;
+        event EventHandler AddNewEvent;
+        event EventHandler EditEvent;
+        event EventHandler DeleteEvent;
+        event EventHandler SaveEvent;
+        event EventHandler CancelEvent;
+
+        void SetPayModeListBildingSource(BindingSource payModeList);
+        void show();
     }
 }
