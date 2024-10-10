@@ -19,9 +19,7 @@ namespace Supermarket_mvp.Models
         [Range(1, 10000)]
         public int Product_Stock { get; set; }
 
-        [Required]
-        public int Category_Id { get; set; }
-        public int Id { get; internal set; }
-        public string? Name { get; internal set; }
+       
+        
     }
 }

@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 using Supermarket_mvp.Views;
 using Supermarket_mvp.Models;
 using Supermarket_mvp._Repositories;
-using System.Windows.Forms;
 
 namespace Supermarket_mvp.Presenters
 {
@@ -23,7 +20,7 @@ namespace Supermarket_mvp.Presenters
             this.view = view;
             this.repository = repository;
 
-            // Asociar eventos de la vista a los métodos del presentador
+            // Asociar eventos de la vista con los métodos del presentador
             this.view.SearchEvent += SearchProduct;
             this.view.AddNewEvent += AddNewProduct;
             this.view.EditEvent += LoadSelectedProductToEdit;
@@ -31,45 +28,57 @@ namespace Supermarket_mvp.Presenters
             this.view.SaveEvent += SaveProduct;
             this.view.CancelEvent += CancelAction;
 
-            // Establecer el BindingSource
+            // Asociar la lista de productos con la vista
             this.view.SetProductListBindingSource(productBindingSource);
 
-            // Cargar todos los productos al iniciar
+            // Cargar todos los productos
             LoadAllProductList();
 
+            // Mostrar la vista
             this.view.Show();
         }
 
-        // Cargar todos los productos de la base de datos
+        // Cargar todos los productos
         private void LoadAllProductList()
         {
             productList = repository.GetAll();
             productBindingSource.DataSource = productList;
         }
 
-        // Acción para cancelar la operación actual y limpiar los campos
-        private void CancelAction(object sender, EventArgs e)
+        // Limpiar los campos de la vista
+        private void CleanViewFields()
+        {
+            view.Id = "0";
+            view.Name = "";
+            view.Price = "0";
+            view.Stock = "0";
+            view.CategoryId = "0";
+        }
+
+        // Cancelar la operación
+        private void CancelAction(object? sender, EventArgs e)
         {
             CleanViewFields();
         }
-
-        // Guardar producto (agregar o editar)
-        private void SaveProduct(object sender, EventArgs e)
+        private void AddNewProduct(object? sender, EventArgs e)
         {
-            // Crear un nuevo objeto ProductModel y asignar los valores de la vista
+            view.IsEdit = false;
+        }
+
+        // Guardar producto (Agregar o Editar)
+        private void SaveProduct(object? sender, EventArgs e)
+        {
+            // Crear un nuevo producto basado en los datos de la vista
             var product = new ProductModel();
-            product.Id = Convert.ToInt32(view.Id);
-            product.Name = view.Name;
-            product.Price = Convert.ToDecimal(view.Price);
-            product.Stock = Convert.ToInt32(view.Stock);
-            product.CategoryId = Convert.ToInt32(view.CategoryId);
+            product.Product_Id = Convert.ToInt32(view.Id);
+            product.Product_Name = view.Name;
+            product.Product_Price = Convert.ToDecimal(view.Price);
+            product.Product_Stock = Convert.ToInt32(view.Stock);
 
             try
             {
-                // Validación de datos del producto
                 new Common.ModelDataValidation().Validate(product);
 
-                // Verificar si estamos en modo de edición o de nuevo producto
                 if (view.IsEdit)
                 {
                     repository.Edit(product);
@@ -87,29 +96,18 @@ namespace Supermarket_mvp.Presenters
             }
             catch (Exception ex)
             {
-                // Manejar cualquier error que ocurra durante el guardado
                 view.IsSuccessful = false;
                 view.Message = ex.Message;
             }
         }
 
-        // Limpiar los campos de la vista
-        private void CleanViewFields()
-        {
-            view.Id = "0";
-            view.Name = "";
-            view.Price = "0";
-            view.Stock = "0";
-            view.CategoryId = "0";
-        }
-
         // Eliminar el producto seleccionado
-        private void DeleteSelectedProduct(object sender, EventArgs e)
+        private void DeleteSelectedProduct(object? sender, EventArgs e)
         {
             try
             {
                 var product = (ProductModel)productBindingSource.Current;
-                repository.Delete(product.Id);
+                repository.Delete(product.Product_Id);
                 view.IsSuccessful = true;
                 view.Message = "Product deleted successfully.";
                 LoadAllProductList();
@@ -117,31 +115,30 @@ namespace Supermarket_mvp.Presenters
             catch (Exception ex)
             {
                 view.IsSuccessful = false;
-                view.Message = "An error occurred, could not delete product.";
+                view.Message = "An error occurred, could not delete the product.";
             }
         }
 
         // Cargar el producto seleccionado para editar
-        private void LoadSelectedProductToEdit(object sender, EventArgs e)
+        private void LoadSelectedProductToEdit(object? sender, EventArgs e)
         {
             var product = (ProductModel)productBindingSource.Current;
 
-            view.Id = product.Id.ToString();
-            view.Name = product.Name;
-            view.Price = product.Price.ToString();
-            view.Stock = product.Stock.ToString();
-            view.CategoryId = product.CategoryId.ToString();
+            view.Id = product.Product_Id.ToString();
+            view.Name = product.Product_Name;
+            view.Price = product.Product_Price.ToString();
+            view.Stock = product.Product_Stock.ToString();
 
             view.IsEdit = true;
         }
 
-        // Buscar productos por valor (ID o nombre)
-        private void SearchProduct(object sender, EventArgs e)
+        // Buscar productos (Por nombre o categoría)
+        private void SearchProduct(object? sender, EventArgs e)
         {
             bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
             if (emptyValue == false)
             {
-                productList = repository.GetByValue(this.view.SearchValue);
+                productList = repository.GetByCategory(this.view.SearchValue);
             }
             else
             {
