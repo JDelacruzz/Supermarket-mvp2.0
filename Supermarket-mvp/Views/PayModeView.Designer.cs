@@ -100,7 +100,7 @@
             // 
             // BtnClose
             // 
-            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.Image = Properties.Resources.cerrar;
             BtnClose.Location = new Point(635, 245);
             BtnClose.Name = "BtnClose";
@@ -110,7 +110,7 @@
             // 
             // BtnDelete
             // 
-            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.Image = Properties.Resources.delete;
             BtnDelete.Location = new Point(635, 188);
             BtnDelete.Name = "BtnDelete";
@@ -120,7 +120,7 @@
             // 
             // BtnEdit
             // 
-            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.Image = Properties.Resources.edit;
             BtnEdit.Location = new Point(635, 127);
             BtnEdit.Name = "BtnEdit";
@@ -130,7 +130,7 @@
             // 
             // BtnNew
             // 
-            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnNew.Image = Properties.Resources._new;
             BtnNew.Location = new Point(635, 69);
             BtnNew.Name = "BtnNew";
@@ -154,7 +154,7 @@
             // 
             // BtnSearch
             // 
-            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.informacion;
             BtnSearch.Location = new Point(532, 32);
             BtnSearch.Name = "BtnSearch";
@@ -164,6 +164,7 @@
             // 
             // TxtSearch
             // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(31, 42);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to Search";
