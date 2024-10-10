@@ -19,6 +19,11 @@ namespace Supermarket_mvp.Models
         [Range(1, 10000)]
         public int Product_Stock { get; set; }
 
+        [Required]
+        [Range(0, 100)]
+        public int Category_Id { get; set; }
+                            
+
        
         
     }
