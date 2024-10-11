@@ -22,6 +22,7 @@ namespace Supermarket_mvp.Presenters
             this.mainView.ShowPayModeView += ShowPayModeView;
             this.mainView.ShowProductView += ShowProductView;
             this.mainView.ShowCustomersView += ShowCustomersView;
+            this.mainView.ShowCategoriesView += ShowCategoriesView;
         }
 
         private void ShowProductView(object? sender, EventArgs e)
