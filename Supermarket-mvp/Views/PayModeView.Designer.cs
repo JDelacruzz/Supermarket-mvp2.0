@@ -156,9 +156,9 @@
             // 
             BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.informacion;
-            BtnSearch.Location = new Point(496, 32);
+            BtnSearch.Location = new Point(461, 32);
             BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(81, 47);
+            BtnSearch.Size = new Size(116, 47);
             BtnSearch.TabIndex = 2;
             BtnSearch.UseVisualStyleBackColor = true;
             // 
@@ -168,7 +168,7 @@
             TxtSearch.Location = new Point(31, 42);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to Search";
-            TxtSearch.Size = new Size(440, 31);
+            TxtSearch.Size = new Size(424, 31);
             TxtSearch.TabIndex = 1;
             // 
             // label2
@@ -193,7 +193,7 @@
             tabPagePayModeDetail.Location = new Point(4, 34);
             tabPagePayModeDetail.Name = "tabPagePayModeDetail";
             tabPagePayModeDetail.Padding = new Padding(3);
-            tabPagePayModeDetail.Size = new Size(792, 316);
+            tabPagePayModeDetail.Size = new Size(792, 305);
             tabPagePayModeDetail.TabIndex = 1;
             tabPagePayModeDetail.Text = "Pay Mode Detail";
             tabPagePayModeDetail.UseVisualStyleBackColor = true;
@@ -273,7 +273,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.buy;
-            pictureBox1.Location = new Point(23, 10);
+            pictureBox1.Location = new Point(44, 10);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(108, 93);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -284,7 +284,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(146, 31);
+            label1.Location = new Point(187, 41);
             label1.Name = "label1";
             label1.Size = new Size(147, 38);
             label1.TabIndex = 0;

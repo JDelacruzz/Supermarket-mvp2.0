@@ -136,9 +136,9 @@
             // 
             BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.informacion;
-            BtnSearch.Location = new Point(498, 40);
+            BtnSearch.Location = new Point(456, 40);
             BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(66, 39);
+            BtnSearch.Size = new Size(99, 39);
             BtnSearch.TabIndex = 12;
             BtnSearch.UseVisualStyleBackColor = true;
             // 
@@ -168,7 +168,7 @@
             TxtSearch.Location = new Point(8, 48);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to Search";
-            TxtSearch.Size = new Size(475, 31);
+            TxtSearch.Size = new Size(442, 31);
             TxtSearch.TabIndex = 1;
             // 
             // label2

@@ -144,9 +144,9 @@
             // 
             BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.informacion;
-            BtnSearch.Location = new Point(453, 27);
+            BtnSearch.Location = new Point(404, 15);
             BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(120, 39);
+            BtnSearch.Size = new Size(116, 47);
             BtnSearch.TabIndex = 2;
             BtnSearch.UseVisualStyleBackColor = true;
             // 
@@ -166,7 +166,7 @@
             TxtSearch.Location = new Point(30, 31);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to search";
-            TxtSearch.Size = new Size(417, 31);
+            TxtSearch.Size = new Size(368, 31);
             TxtSearch.TabIndex = 1;
             // 
             // BtnNew
@@ -365,10 +365,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Emoji", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(227, 45);
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(215, 45);
             label1.Name = "label1";
-            label1.Size = new Size(144, 37);
+            label1.Size = new Size(143, 38);
             label1.TabIndex = 0;
             label1.Text = "Customer";
             // 
