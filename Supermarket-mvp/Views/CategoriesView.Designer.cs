@@ -29,19 +29,17 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
             tabControl1 = new TabControl();
             tabPageCategoriesList = new TabPage();
-            tabPageCategoriesDetail = new TabPage();
-            label2 = new Label();
-            TxtSearch = new TextBox();
             BtnClose = new Button();
             DgCategories = new DataGridView();
             BtnDelete = new Button();
             BtnSearch = new Button();
             BtnEdit = new Button();
             BtnNew = new Button();
+            TxtSearch = new TextBox();
+            label2 = new Label();
+            tabPageCategoriesDetail = new TabPage();
             BtnCancelar = new Button();
             BtnSave = new Button();
             TxtCategoriesDescription = new TextBox();
@@ -50,12 +48,14 @@
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
             tabPageCategoriesList.SuspendLayout();
-            tabPageCategoriesDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DgCategories).BeginInit();
+            tabPageCategoriesDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -68,25 +68,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 446);
             panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(187, 34);
-            label1.Name = "label1";
-            label1.Size = new Size(96, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Categories";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.clasificacion;
-            pictureBox1.Location = new Point(31, 21);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(150, 75);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
             // 
             // tabControl1
             // 
@@ -116,41 +97,6 @@
             tabPageCategoriesList.TabIndex = 0;
             tabPageCategoriesList.Text = "Categories List";
             tabPageCategoriesList.UseVisualStyleBackColor = true;
-            // 
-            // tabPageCategoriesDetail
-            // 
-            tabPageCategoriesDetail.Controls.Add(BtnCancelar);
-            tabPageCategoriesDetail.Controls.Add(BtnSave);
-            tabPageCategoriesDetail.Controls.Add(TxtCategoriesDescription);
-            tabPageCategoriesDetail.Controls.Add(TxtCategoriesName);
-            tabPageCategoriesDetail.Controls.Add(TxtCategoriesId);
-            tabPageCategoriesDetail.Controls.Add(label5);
-            tabPageCategoriesDetail.Controls.Add(label4);
-            tabPageCategoriesDetail.Controls.Add(label3);
-            tabPageCategoriesDetail.Location = new Point(4, 34);
-            tabPageCategoriesDetail.Name = "tabPageCategoriesDetail";
-            tabPageCategoriesDetail.Padding = new Padding(3);
-            tabPageCategoriesDetail.Size = new Size(792, 306);
-            tabPageCategoriesDetail.TabIndex = 1;
-            tabPageCategoriesDetail.Text = "Categories Detail";
-            tabPageCategoriesDetail.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(8, 20);
-            label2.Name = "label2";
-            label2.Size = new Size(116, 25);
-            label2.TabIndex = 0;
-            label2.Text = "Search Mode";
-            // 
-            // TxtSearch
-            // 
-            TxtSearch.Location = new Point(8, 48);
-            TxtSearch.Name = "TxtSearch";
-            TxtSearch.PlaceholderText = "Data to Search";
-            TxtSearch.Size = new Size(475, 31);
-            TxtSearch.TabIndex = 1;
             // 
             // BtnClose
             // 
@@ -190,7 +136,7 @@
             // 
             BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.informacion;
-            BtnSearch.Location = new Point(489, 40);
+            BtnSearch.Location = new Point(498, 40);
             BtnSearch.Name = "BtnSearch";
             BtnSearch.Size = new Size(66, 39);
             BtnSearch.TabIndex = 12;
@@ -215,6 +161,42 @@
             BtnNew.Size = new Size(112, 40);
             BtnNew.TabIndex = 14;
             BtnNew.UseVisualStyleBackColor = true;
+            // 
+            // TxtSearch
+            // 
+            TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            TxtSearch.Location = new Point(8, 48);
+            TxtSearch.Name = "TxtSearch";
+            TxtSearch.PlaceholderText = "Data to Search";
+            TxtSearch.Size = new Size(475, 31);
+            TxtSearch.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(8, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(116, 25);
+            label2.TabIndex = 0;
+            label2.Text = "Search Mode";
+            // 
+            // tabPageCategoriesDetail
+            // 
+            tabPageCategoriesDetail.Controls.Add(BtnCancelar);
+            tabPageCategoriesDetail.Controls.Add(BtnSave);
+            tabPageCategoriesDetail.Controls.Add(TxtCategoriesDescription);
+            tabPageCategoriesDetail.Controls.Add(TxtCategoriesName);
+            tabPageCategoriesDetail.Controls.Add(TxtCategoriesId);
+            tabPageCategoriesDetail.Controls.Add(label5);
+            tabPageCategoriesDetail.Controls.Add(label4);
+            tabPageCategoriesDetail.Controls.Add(label3);
+            tabPageCategoriesDetail.Location = new Point(4, 34);
+            tabPageCategoriesDetail.Name = "tabPageCategoriesDetail";
+            tabPageCategoriesDetail.Padding = new Padding(3);
+            tabPageCategoriesDetail.Size = new Size(792, 306);
+            tabPageCategoriesDetail.TabIndex = 1;
+            tabPageCategoriesDetail.Text = "Categories Detail";
+            tabPageCategoriesDetail.UseVisualStyleBackColor = true;
             // 
             // BtnCancelar
             // 
@@ -288,6 +270,26 @@
             label3.TabIndex = 8;
             label3.Text = "Categories Id";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.clasificacion;
+            pictureBox1.Location = new Point(31, 21);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(150, 75);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(187, 40);
+            label1.Name = "label1";
+            label1.Size = new Size(155, 38);
+            label1.TabIndex = 0;
+            label1.Text = "Categories";
+            // 
             // CategoriesView
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -298,13 +300,13 @@
             Text = "Categories Management";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabControl1.ResumeLayout(false);
             tabPageCategoriesList.ResumeLayout(false);
             tabPageCategoriesList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)DgCategories).EndInit();
             tabPageCategoriesDetail.ResumeLayout(false);
             tabPageCategoriesDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)DgCategories).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 

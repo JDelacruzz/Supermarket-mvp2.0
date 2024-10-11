@@ -143,6 +143,16 @@ namespace Supermarket_mvp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Initial_D__Fujiwara_Tofu_Shop___Anime_ver___Gerbe_Dumahil {
+            get {
+                object obj = ResourceManager.GetObject("Initial D_ Fujiwara Tofu Shop - Anime ver_, Gerbe Dumahil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nuevo_producto {
             get {
                 object obj = ResourceManager.GetObject("nuevo-producto", resourceCulture);
@@ -166,6 +176,16 @@ namespace Supermarket_mvp.Properties {
         internal static System.Drawing.Bitmap salida {
             get {
                 object obj = ResourceManager.GetObject("salida", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Salirverde {
+            get {
+                object obj = ResourceManager.GetObject("Salirverde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

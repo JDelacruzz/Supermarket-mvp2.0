@@ -64,20 +64,20 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.None;
             panel1.Controls.Add(tabControl1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 3);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 516);
             panel1.TabIndex = 0;
             // 
             // tabControl1
             // 
-            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tabControl1.Controls.Add(tabPageProductList);
             tabControl1.Controls.Add(tabPageProductDetail);
+            tabControl1.Dock = DockStyle.Bottom;
             tabControl1.Location = new Point(0, 143);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -106,9 +106,9 @@
             // 
             BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(597, 270);
+            BtnClose.Location = new Point(587, 270);
             BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(112, 38);
+            BtnClose.Size = new Size(122, 38);
             BtnClose.TabIndex = 11;
             BtnClose.UseVisualStyleBackColor = true;
             // 
@@ -116,9 +116,9 @@
             // 
             BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(597, 213);
+            BtnDelete.Location = new Point(587, 213);
             BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(112, 36);
+            BtnDelete.Size = new Size(122, 36);
             BtnDelete.TabIndex = 10;
             BtnDelete.UseVisualStyleBackColor = true;
             // 
@@ -126,9 +126,9 @@
             // 
             BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(597, 152);
+            BtnEdit.Location = new Point(587, 152);
             BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(112, 37);
+            BtnEdit.Size = new Size(122, 37);
             BtnEdit.TabIndex = 9;
             BtnEdit.UseVisualStyleBackColor = true;
             // 
@@ -136,9 +136,9 @@
             // 
             BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(597, 94);
+            BtnNew.Location = new Point(587, 94);
             BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(112, 40);
+            BtnNew.Size = new Size(122, 40);
             BtnNew.TabIndex = 8;
             BtnNew.UseVisualStyleBackColor = true;
             // 
@@ -160,9 +160,9 @@
             // 
             BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.informacion;
-            BtnSearch.Location = new Point(472, 54);
+            BtnSearch.Location = new Point(460, 54);
             BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(66, 37);
+            BtnSearch.Size = new Size(78, 37);
             BtnSearch.TabIndex = 2;
             BtnSearch.UseVisualStyleBackColor = true;
             // 
@@ -171,7 +171,7 @@
             TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(27, 54);
             TxtSearch.Name = "TxtSearch";
-            TxtSearch.Size = new Size(427, 31);
+            TxtSearch.Size = new Size(419, 31);
             TxtSearch.TabIndex = 1;
             // 
             // label2
@@ -315,7 +315,7 @@
             pictureBox1.Image = Properties.Resources.products;
             pictureBox1.Location = new Point(12, 34);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(150, 75);
+            pictureBox1.Size = new Size(163, 91);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -323,9 +323,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(159, 48);
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(181, 63);
             label1.Name = "label1";
-            label1.Size = new Size(184, 25);
+            label1.Size = new Size(303, 38);
             label1.TabIndex = 0;
             label1.Text = "Product Management";
             // 

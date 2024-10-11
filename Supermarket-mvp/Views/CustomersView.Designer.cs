@@ -71,8 +71,8 @@
             panel1.Controls.Add(tabControl1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, -4);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 454);
             panel1.TabIndex = 0;
@@ -110,9 +110,9 @@
             // 
             BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(620, 245);
+            BtnClose.Location = new Point(593, 245);
             BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(112, 38);
+            BtnClose.Size = new Size(139, 38);
             BtnClose.TabIndex = 11;
             BtnClose.UseVisualStyleBackColor = true;
             // 
@@ -127,16 +127,16 @@
             DgCustomers.Name = "DgCustomers";
             DgCustomers.ReadOnly = true;
             DgCustomers.RowHeadersWidth = 62;
-            DgCustomers.Size = new Size(547, 225);
+            DgCustomers.Size = new Size(494, 225);
             DgCustomers.TabIndex = 3;
             // 
             // BtnDelete
             // 
             BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(620, 188);
+            BtnDelete.Location = new Point(593, 188);
             BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(112, 36);
+            BtnDelete.Size = new Size(139, 36);
             BtnDelete.TabIndex = 10;
             BtnDelete.UseVisualStyleBackColor = true;
             // 
@@ -144,9 +144,9 @@
             // 
             BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.informacion;
-            BtnSearch.Location = new Point(507, 27);
+            BtnSearch.Location = new Point(453, 27);
             BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(66, 39);
+            BtnSearch.Size = new Size(120, 39);
             BtnSearch.TabIndex = 2;
             BtnSearch.UseVisualStyleBackColor = true;
             // 
@@ -154,9 +154,9 @@
             // 
             BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(620, 127);
+            BtnEdit.Location = new Point(593, 127);
             BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(112, 37);
+            BtnEdit.Size = new Size(139, 37);
             BtnEdit.TabIndex = 9;
             BtnEdit.UseVisualStyleBackColor = true;
             // 
@@ -166,16 +166,16 @@
             TxtSearch.Location = new Point(30, 31);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to search";
-            TxtSearch.Size = new Size(471, 31);
+            TxtSearch.Size = new Size(417, 31);
             TxtSearch.TabIndex = 1;
             // 
             // BtnNew
             // 
             BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(620, 69);
+            BtnNew.Location = new Point(593, 69);
             BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(112, 40);
+            BtnNew.Size = new Size(139, 40);
             BtnNew.TabIndex = 8;
             BtnNew.UseVisualStyleBackColor = true;
             // 
@@ -284,6 +284,8 @@
             // 
             TxtCustomersId.Location = new Point(173, 32);
             TxtCustomersId.Name = "TxtCustomersId";
+            TxtCustomersId.PlaceholderText = "0";
+            TxtCustomersId.ReadOnly = true;
             TxtCustomersId.Size = new Size(168, 31);
             TxtCustomersId.TabIndex = 7;
             // 
@@ -353,9 +355,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.satisfaccion_del_consumidor;
-            pictureBox1.Location = new Point(30, 33);
+            pictureBox1.Location = new Point(12, 17);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(150, 75);
+            pictureBox1.Size = new Size(176, 91);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -363,9 +365,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(205, 67);
+            label1.Font = new Font("Segoe UI Emoji", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(227, 45);
             label1.Name = "label1";
-            label1.Size = new Size(89, 25);
+            label1.Size = new Size(144, 37);
             label1.TabIndex = 0;
             label1.Text = "Customer";
             // 

@@ -91,7 +91,7 @@ namespace Supermarket_mvp.Views
                 }
             };
 
-            MessageBox.Show(Message);
+            //MessageBox.Show(Message);
 
             BtnCancelar.Click += delegate {
                 CancelEvent?.Invoke(this, EventArgs.Empty);

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            BtnCategories = new Button();
             BtnCustomers = new Button();
             BtnProduct = new Button();
             BtnExit = new Button();
             BtnPayMode = new Button();
             pictureBox1 = new PictureBox();
-            BtnCategories = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -50,16 +50,26 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(237, 528);
+            panel1.Size = new Size(237, 910);
             panel1.TabIndex = 0;
+            // 
+            // BtnCategories
+            // 
+            BtnCategories.BackgroundImage = Properties.Resources.clasificacion;
+            BtnCategories.BackgroundImageLayout = ImageLayout.Zoom;
+            BtnCategories.Location = new Point(-3, 583);
+            BtnCategories.Name = "BtnCategories";
+            BtnCategories.Size = new Size(240, 150);
+            BtnCategories.TabIndex = 5;
+            BtnCategories.UseVisualStyleBackColor = true;
             // 
             // BtnCustomers
             // 
             BtnCustomers.BackgroundImage = Properties.Resources.satisfaccion_del_consumidor;
             BtnCustomers.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnCustomers.Location = new Point(-3, 245);
+            BtnCustomers.Location = new Point(-3, 435);
             BtnCustomers.Name = "BtnCustomers";
-            BtnCustomers.Size = new Size(237, 76);
+            BtnCustomers.Size = new Size(237, 142);
             BtnCustomers.TabIndex = 4;
             BtnCustomers.UseVisualStyleBackColor = true;
             // 
@@ -67,20 +77,20 @@
             // 
             BtnProduct.BackgroundImage = Properties.Resources.products;
             BtnProduct.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnProduct.Location = new Point(0, 163);
+            BtnProduct.Location = new Point(-3, 287);
             BtnProduct.Name = "BtnProduct";
-            BtnProduct.Size = new Size(237, 76);
+            BtnProduct.Size = new Size(237, 142);
             BtnProduct.TabIndex = 3;
             BtnProduct.UseVisualStyleBackColor = true;
             // 
             // BtnExit
             // 
-            BtnExit.BackgroundImage = Properties.Resources.salida;
+            BtnExit.BackgroundImage = Properties.Resources.Salirverde;
             BtnExit.BackgroundImageLayout = ImageLayout.Zoom;
             BtnExit.Dock = DockStyle.Bottom;
-            BtnExit.Location = new Point(0, 468);
+            BtnExit.Location = new Point(0, 768);
             BtnExit.Name = "BtnExit";
-            BtnExit.Size = new Size(237, 60);
+            BtnExit.Size = new Size(237, 142);
             BtnExit.TabIndex = 2;
             BtnExit.UseVisualStyleBackColor = true;
             // 
@@ -88,9 +98,9 @@
             // 
             BtnPayMode.BackgroundImage = Properties.Resources.buy;
             BtnPayMode.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnPayMode.Location = new Point(0, 81);
+            BtnPayMode.Location = new Point(-3, 139);
             BtnPayMode.Name = "BtnPayMode";
-            BtnPayMode.Size = new Size(237, 76);
+            BtnPayMode.Size = new Size(237, 142);
             BtnPayMode.TabIndex = 1;
             BtnPayMode.UseVisualStyleBackColor = true;
             // 
@@ -99,26 +109,18 @@
             pictureBox1.Image = Properties.Resources.sell;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(237, 75);
+            pictureBox1.Size = new Size(237, 142);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            // 
-            // BtnCategories
-            // 
-            BtnCategories.BackgroundImage = Properties.Resources.clasificacion;
-            BtnCategories.BackgroundImageLayout = ImageLayout.Zoom;
-            BtnCategories.Location = new Point(0, 337);
-            BtnCategories.Name = "BtnCategories";
-            BtnCategories.Size = new Size(237, 76);
-            BtnCategories.TabIndex = 5;
-            BtnCategories.UseVisualStyleBackColor = true;
             // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 528);
+            BackgroundImage = Properties.Resources.Initial_D__Fujiwara_Tofu_Shop___Anime_ver___Gerbe_Dumahil;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(974, 910);
             Controls.Add(panel1);
             IsMdiContainer = true;
             Name = "MainView";
