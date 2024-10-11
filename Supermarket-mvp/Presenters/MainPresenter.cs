@@ -43,5 +43,11 @@ namespace Supermarket_mvp.Presenters
             ICustomersRepository repository = new CustomersRepository(sqlConnectionString);
             new CustomersPresenter(view, repository);
         }
+        private void ShowCategoriesView(object? sender, EventArgs e)
+        {
+            ICategoriesView view = CategoriesView.GetInstance((MainView)mainView);
+            ICategoriesRepository repository = new CategoriesRepository(sqlConnectionString);
+            new CategoriesPresenter(view, repository);
+        }
     }
 }
