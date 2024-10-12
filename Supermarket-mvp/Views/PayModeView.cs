@@ -84,11 +84,11 @@ namespace Supermarket_mvp.Views
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
 
-                if (isSuccessful)
-                {
-                    tabControl1.TabPages.Remove(tabPagePayModeDetail);
+                if (isSuccesfull)
+                { 
                     tabControl1.TabPages.Add(tabPagePayModeList);
-                    
+                    tabControl1.TabPages.Remove(tabPagePayModeDetail);
+
                 }
 
                 MessageBox.Show(Message);
@@ -147,7 +147,6 @@ namespace Supermarket_mvp.Views
         }
         //Patron singleton para controlar solo una instancai del formulario
         private static PayModeView instance;
-        private bool isSuccessful;
 
         public static PayModeView GetInstance(Form parentContainer)
         {

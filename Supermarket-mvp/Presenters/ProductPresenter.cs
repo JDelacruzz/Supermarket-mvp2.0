@@ -63,6 +63,7 @@ namespace Supermarket_mvp.Presenters
         private void AddNewProduct(object? sender, EventArgs e)
         {
             view.IsEdit = false;
+            LoadAllProductList();
         }
 
         // Guardar producto (Agregar o Editar)
@@ -74,6 +75,7 @@ namespace Supermarket_mvp.Presenters
             product.Product_Name = view.Name;
             product.Product_Price = Convert.ToDecimal(view.Price);
             product.Product_Stock = Convert.ToInt32(view.Stock);
+            product.Category_Id = Convert.ToInt32(view.CategoryId);
 
             try
             {
@@ -128,6 +130,7 @@ namespace Supermarket_mvp.Presenters
             view.Name = product.Product_Name;
             view.Price = product.Product_Price.ToString();
             view.Stock = product.Product_Stock.ToString();
+            view.Stock = product.Category_Id.ToString();
 
             view.IsEdit = true;
         }

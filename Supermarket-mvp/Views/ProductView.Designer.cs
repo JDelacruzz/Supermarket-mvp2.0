@@ -171,6 +171,7 @@
             TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             TxtSearch.Location = new Point(27, 54);
             TxtSearch.Name = "TxtSearch";
+            TxtSearch.PlaceholderText = "Data To Search";
             TxtSearch.Size = new Size(390, 31);
             TxtSearch.TabIndex = 1;
             // 

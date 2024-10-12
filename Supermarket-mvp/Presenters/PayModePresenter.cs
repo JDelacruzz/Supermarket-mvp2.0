@@ -17,7 +17,7 @@
             private IPayModeRepository repository;
             private BindingSource payModeBindingSource;
             private IEnumerable<PayModeModel> payModeList;
-            //private object payModeBidingSource;
+            
 
             public PayModePresenter(IPayModeView view, IPayModeRepository repository)
             {
@@ -123,7 +123,7 @@
 
                     view.PayModeId = payMode.Id.ToString();
                     view.PayModeName = payMode.Name;
-                    view.PayModeObservation = payMode.Observation.ToString();
+                    view.PayModeObservation = payMode.Observation;
 
                     view.IsEdit = true;
             }
@@ -131,6 +131,7 @@
             private void AddNewPayMode(object? sender, EventArgs e)
             {
                view.IsEdit = false;
+               loadAllPayModeList();
             }
 
             private void SearchPayMode(object? sender, EventArgs e)
