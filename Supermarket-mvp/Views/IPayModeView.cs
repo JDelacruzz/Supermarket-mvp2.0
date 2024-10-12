@@ -14,7 +14,6 @@ namespace Supermarket_mvp.Views
 
         string SearchValue { get; set; }
         bool IsEdit { get; set; }
-        bool IsSuccesfull { get; set; }
         string Message { get; set; }
         bool IsSuccessful { get; set; }
 

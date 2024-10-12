@@ -128,8 +128,8 @@ namespace Supermarket_mvp.Views
 
         public string BirthDay
         {
-            get { return TxtCustomersPhone.Text; }
-            set { TxtCustomersPhone.Text = value; }
+            get { return TxtBirthDay.Text; }
+            set { TxtBirthDay.Text = value; }
         }
 
         public string PhoneNumber

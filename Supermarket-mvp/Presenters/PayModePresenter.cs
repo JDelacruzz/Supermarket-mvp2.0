@@ -52,35 +52,40 @@
 
             private void SavePayMode(object? sender, EventArgs e)
             {
-            // Se crea un objeto de la clase PayModeModel y se asignan los datos
-            // De las cajas de texto de la vista
             var payMode = new PayModeModel();
-            payMode.Id = Convert.ToInt32(view.PayModeId);
+
+            if (!int.TryParse(view.PayModeId, out int id))
+            {
+                view.Message = "El ID del modo de pago debe ser un número válido.";
+                view.IsSuccessful = false;
+                return;
+            }
+
+            payMode.Id = id;
             payMode.Name = view.PayModeName;
             payMode.Observation = view.PayModeObservation;
 
             try
             {
                 new Common.ModelDataValidation().Validate(payMode);
+
                 if (view.IsEdit)
                 {
                     repository.Edit(payMode);
-                    view.Message = "PayMode edited successfully";
-
+                    view.Message = "Método de pago editado correctamente";
                 }
                 else
                 {
                     repository.Add(payMode);
-                    view.Message = "PayMode added successfully";
+                    view.Message = "Método de pago añadido correctamente";
                 }
-                view.IsSuccesfull = true;
+
+                view.IsSuccessful = true;
                 loadAllPayModeList();
                 CleanViewFields();
             }
             catch (Exception ex)
             {
-                // Si ocurre una excepción se configura IsSuccessful en false
-                // y a la propiedad Message de la vista se asigna el mensaje de la excepción
                 view.IsSuccessful = false;
                 view.Message = ex.Message;
             }
@@ -100,7 +105,7 @@
                 var payMode = (PayModeModel)payModeBindingSource.Current;
 
                 repository.Delete(payMode.Id);
-                view.IsSuccesfull = true;
+                view.IsSuccessful = true;
                 view.Message = "Pay Mode deleted Succesfully";
                 loadAllPayModeList();
             }

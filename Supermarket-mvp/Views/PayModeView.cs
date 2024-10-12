@@ -84,14 +84,15 @@ namespace Supermarket_mvp.Views
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
 
-                if (isSuccessful) // Si grabar fue exitoso
+                if (isSuccessful)
                 {
                     tabControl1.TabPages.Remove(tabPagePayModeDetail);
                     tabControl1.TabPages.Add(tabPagePayModeList);
+                    
                 }
-            };
 
-            //MessageBox.Show(Message);
+                MessageBox.Show(Message);
+            };//
 
             BtnCancelar.Click += delegate {
                 CancelEvent?.Invoke(this, EventArgs.Empty);
@@ -127,7 +128,7 @@ namespace Supermarket_mvp.Views
             get { return isEdit; }
             set { isEdit = value; }
         }
-        public bool IsSuccesfull
+        public bool IsSuccessful
         {
             get { return isSuccesfull; }
             set { isSuccesfull = value; }
@@ -138,7 +139,7 @@ namespace Supermarket_mvp.Views
             set { message = value; }
         }
 
-        public bool IsSuccessful { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        
 
         public void SetPayModeListBildingSource(BindingSource payModeList)
         {
