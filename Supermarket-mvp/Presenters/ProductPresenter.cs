@@ -28,10 +28,13 @@ namespace Supermarket_mvp.Presenters
             this.view.SaveEvent += SaveProduct;
             this.view.CancelEvent += CancelAction;
 
+            // Asignar la lista de productos a la vista
             this.view.SetProductListBindingSource(productBindingSource);
 
+            // Cargar la lista completa de productos
             LoadAllProductList();
 
+            // Mostrar la vista
             this.view.Show();
         }
 
@@ -42,14 +45,13 @@ namespace Supermarket_mvp.Presenters
             productBindingSource.DataSource = productList;
         }
 
-        // Limpiar los campos de la vista
-       
-
         // Cancelar la operación
         private void CancelAction(object? sender, EventArgs e)
         {
             LoadAllProductList();
         }
+
+        // Agregar un nuevo producto
         private void AddNewProduct(object? sender, EventArgs e)
         {
             view.IsEdit = false;
@@ -61,11 +63,49 @@ namespace Supermarket_mvp.Presenters
         {
             // Crear un nuevo producto basado en los datos de la vista
             var product = new ProductModel();
-            product.Product_Id = Convert.ToInt32(view.Id);
+
+            // Validar que los campos no estén vacíos o sean inválidos antes de convertir
+            if (!string.IsNullOrWhiteSpace(view.Id) && int.TryParse(view.Id, out int productId))
+            {
+                product.Product_Id = productId;
+            }
+            else
+            {
+                view.Message = "El ID del producto no es válido.";
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(view.Price) && decimal.TryParse(view.Price, out decimal productPrice))
+            {
+                product.Product_Price = productPrice;
+            }
+            else
+            {
+                view.Message = "El precio del producto no es válido.";
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(view.Stock) && int.TryParse(view.Stock, out int productStock))
+            {
+                product.Product_Stock = productStock;
+            }
+            else
+            {
+                view.Message = "El stock del producto no es válido.";
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(view.CategoryId) && int.TryParse(view.CategoryId, out int categoryId))
+            {
+                product.Category_Id = categoryId;
+            }
+            else
+            {
+                view.Message = "El ID de la categoría no es válido.";
+                return;
+            }
+
             product.Product_Name = view.Name;
-            product.Product_Price = Convert.ToInt32(view.Price);
-            product.Product_Stock = Convert.ToInt32(view.Stock);
-            product.Category_Id = Convert.ToInt32(view.CategoryId);
 
             try
             {
@@ -74,12 +114,12 @@ namespace Supermarket_mvp.Presenters
                 if (view.IsEdit)
                 {
                     repository.Edit(product);
-                    view.Message = "Product edited successfully.";
+                    view.Message = "Producto editado correctamente.";
                 }
                 else
                 {
                     repository.Add(product);
-                    view.Message = "Product added successfully.";
+                    view.Message = "Producto añadido correctamente.";
                 }
 
                 view.IsSuccessful = true;
@@ -92,6 +132,7 @@ namespace Supermarket_mvp.Presenters
             }
         }
 
+
         // Eliminar el producto seleccionado
         private void DeleteSelectedProduct(object? sender, EventArgs e)
         {
@@ -100,13 +141,13 @@ namespace Supermarket_mvp.Presenters
                 var product = (ProductModel)productBindingSource.Current;
                 repository.Delete(product.Product_Id);
                 view.IsSuccessful = true;
-                view.Message = "Product deleted successfully.";
+                view.Message = "Producto eliminado correctamente.";
                 LoadAllProductList();
             }
             catch (Exception ex)
             {
                 view.IsSuccessful = false;
-                view.Message = "An error occurred, could not delete the product.";
+                view.Message = "Error al eliminar el producto.";
             }
         }
 
@@ -119,17 +160,16 @@ namespace Supermarket_mvp.Presenters
             view.Name = product.Product_Name;
             view.Price = product.Product_Price.ToString();
             view.Stock = product.Product_Stock.ToString();
-            view.Stock = product.Category_Id.ToString();
+            view.CategoryId = product.Category_Id.ToString();
 
             view.IsEdit = true;
         }
-        
 
         // Buscar productos (Por nombre o categoría)
         private void SearchProduct(object? sender, EventArgs e)
         {
             bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
-            if (emptyValue == false)
+            if (!emptyValue)
             {
                 productList = repository.GetByCategory(this.view.SearchValue);
             }
