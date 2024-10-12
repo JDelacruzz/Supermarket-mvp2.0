@@ -46,22 +46,12 @@ namespace Supermarket_mvp.Presenters
         }
 
         // Limpiar los campos de la vista
-        private void CleanViewFields()
-        {
-            view.Id = "0";
-            view.DocumentNumber = "";
-            view.FirstName = "";
-            view.LastName = "";
-            view.Address = "";
-            view.BirthDay = "";
-            view.PhoneNumber = "";
-            view.Email = "";
-        }
+       
 
         // Cancelar la operación
         private void CancelAction(object? sender, EventArgs e)
         {
-            CleanViewFields();
+            LoadAllCustomerList();
         }
 
         // Guardar un cliente (Agregar o Editar)
@@ -97,7 +87,7 @@ namespace Supermarket_mvp.Presenters
 
                 view.IsSuccessful = true;
                 LoadAllCustomerList();
-                CleanViewFields();
+               
             }
             catch (Exception ex)
             {
@@ -143,6 +133,7 @@ namespace Supermarket_mvp.Presenters
         private void AddNewCustomer(object? sender, EventArgs e)
         {
             view.IsEdit = false;
+            LoadAllCustomerList();
         }
         // Buscar clientes (por documento o nombre)
         private void SearchCustomer(object? sender, EventArgs e)

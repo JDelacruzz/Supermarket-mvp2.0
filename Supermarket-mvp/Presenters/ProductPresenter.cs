@@ -43,19 +43,12 @@ namespace Supermarket_mvp.Presenters
         }
 
         // Limpiar los campos de la vista
-        private void CleanViewFields()
-        {
-            view.Id = "0";
-            view.Name = "";
-            view.Price = "0";
-            view.Stock = "0";
-            view.CategoryId = "0";
-        }
+       
 
         // Cancelar la operación
         private void CancelAction(object? sender, EventArgs e)
         {
-            CleanViewFields();
+            LoadAllProductList();
         }
         private void AddNewProduct(object? sender, EventArgs e)
         {
@@ -70,7 +63,7 @@ namespace Supermarket_mvp.Presenters
             var product = new ProductModel();
             product.Product_Id = Convert.ToInt32(view.Id);
             product.Product_Name = view.Name;
-            product.Product_Price = Convert.ToDecimal(view.Price);
+            product.Product_Price = Convert.ToInt32(view.Price);
             product.Product_Stock = Convert.ToInt32(view.Stock);
             product.Category_Id = Convert.ToInt32(view.CategoryId);
 
@@ -91,7 +84,6 @@ namespace Supermarket_mvp.Presenters
 
                 view.IsSuccessful = true;
                 LoadAllProductList();
-                CleanViewFields();
             }
             catch (Exception ex)
             {
@@ -131,6 +123,7 @@ namespace Supermarket_mvp.Presenters
 
             view.IsEdit = true;
         }
+        
 
         // Buscar productos (Por nombre o categoría)
         private void SearchProduct(object? sender, EventArgs e)

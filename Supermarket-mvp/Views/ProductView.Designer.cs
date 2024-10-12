@@ -40,6 +40,7 @@
             TxtSearch = new TextBox();
             label2 = new Label();
             tabPageProductDetail = new TabPage();
+            TxtProductName = new TextBox();
             BtnCancelar = new Button();
             BtnSave = new Button();
             TxtProductCategoryId = new TextBox();
@@ -50,7 +51,6 @@
             label4 = new Label();
             label3 = new Label();
             TxtProductPrice = new TextBox();
-            TxtProductName = new TextBox();
             TxtProductId = new TextBox();
             pictureBox1 = new PictureBox();
             label1 = new Label();
@@ -64,10 +64,10 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(tabControl1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 516);
@@ -75,9 +75,9 @@
             // 
             // tabControl1
             // 
+            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabControl1.Controls.Add(tabPageProductList);
             tabControl1.Controls.Add(tabPageProductDetail);
-            tabControl1.Dock = DockStyle.Bottom;
             tabControl1.Location = new Point(0, 143);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -186,6 +186,7 @@
             // 
             // tabPageProductDetail
             // 
+            tabPageProductDetail.Controls.Add(TxtProductName);
             tabPageProductDetail.Controls.Add(BtnCancelar);
             tabPageProductDetail.Controls.Add(BtnSave);
             tabPageProductDetail.Controls.Add(TxtProductCategoryId);
@@ -196,7 +197,6 @@
             tabPageProductDetail.Controls.Add(label4);
             tabPageProductDetail.Controls.Add(label3);
             tabPageProductDetail.Controls.Add(TxtProductPrice);
-            tabPageProductDetail.Controls.Add(TxtProductName);
             tabPageProductDetail.Controls.Add(TxtProductId);
             tabPageProductDetail.Location = new Point(4, 34);
             tabPageProductDetail.Name = "tabPageProductDetail";
@@ -205,6 +205,14 @@
             tabPageProductDetail.TabIndex = 1;
             tabPageProductDetail.Text = "Product Detail";
             tabPageProductDetail.UseVisualStyleBackColor = true;
+            // 
+            // TxtProductName
+            // 
+            TxtProductName.Location = new Point(52, 125);
+            TxtProductName.Name = "TxtProductName";
+            TxtProductName.PlaceholderText = "Product Name";
+            TxtProductName.Size = new Size(199, 31);
+            TxtProductName.TabIndex = 12;
             // 
             // BtnCancelar
             // 
@@ -293,14 +301,6 @@
             TxtProductPrice.Size = new Size(197, 31);
             TxtProductPrice.TabIndex = 2;
             // 
-            // TxtProductName
-            // 
-            TxtProductName.Location = new Point(52, 130);
-            TxtProductName.Name = "TxtProductName";
-            TxtProductName.PlaceholderText = "Product Name";
-            TxtProductName.Size = new Size(197, 31);
-            TxtProductName.TabIndex = 1;
-            // 
             // TxtProductId
             // 
             TxtProductId.Location = new Point(52, 43);
@@ -375,9 +375,9 @@
         private Label label4;
         private Label label3;
         private TextBox TxtProductPrice;
-        private TextBox TxtProductName;
         private TextBox TxtProductId;
         private Button BtnCancelar;
         private Button BtnSave;
+        private TextBox TxtProductName;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             panel1 = new Panel();
             BtnCategories = new Button();
             BtnCustomers = new Button();
@@ -122,6 +123,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(974, 910);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             Name = "MainView";
             Text = "Supermarket";

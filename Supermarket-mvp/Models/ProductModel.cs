@@ -12,7 +12,7 @@ namespace Supermarket_mvp.Models
         public string Product_Name { get; set; }
 
         [Required]
-        [Range(0.01, 999999.99)]
+        [Range(1, 999999.99)]
         public decimal Product_Price { get; set; }
 
         [Required]

@@ -52,7 +52,9 @@ namespace Supermarket_mvp.Views
 
                 tabControl1.TabPages.Remove(tabPageProductList);
                 tabControl1.TabPages.Add(tabPageProductDetail);
-                tabPageProductDetail.Text = "Add New Product"; // Cambiar el título de la pestaña
+                tabPageProductDetail.Text = "Add New Product";
+
+                ClearFields();
             };
 
             // Evento para editar el producto seleccionado
@@ -88,6 +90,8 @@ namespace Supermarket_mvp.Views
                 {
                     tabControl1.TabPages.Remove(tabPageProductDetail);
                     tabControl1.TabPages.Add(tabPageProductList);
+
+                    ClearFields();
                 }
                 MessageBox.Show(Message); // Mostrar el mensaje después de guardar
             };
@@ -98,6 +102,8 @@ namespace Supermarket_mvp.Views
 
                 tabControl1.TabPages.Remove(tabPageProductDetail);
                 tabControl1.TabPages.Add(tabPageProductList);
+
+                ClearFields();
             };
         }
 
@@ -157,13 +163,19 @@ namespace Supermarket_mvp.Views
             set { message = value; }
         }
 
-        // Método para asociar la lista de productos al DataGridView
+        public void ClearFields()
+        {
+            TxtProductName.Text = string.Empty;
+            TxtProductPrice.Text = string.Empty;
+            TxtProductStock.Text = string.Empty;
+            TxtProductCategoryId.Text = string.Empty;
+        }
+
         public void SetProductListBindingSource(BindingSource productList)
         {
             DgProductList.DataSource = productList;
         }
 
-        // Patrón singleton para controlar solo una instancia del formulario
         private static ProductView instance;
 
         public static ProductView GetInstance(Form parentContainer)

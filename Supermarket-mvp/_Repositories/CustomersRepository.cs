@@ -28,8 +28,8 @@ namespace Supermarket_mvp._Repositories
                 command.Parameters.AddWithValue("@firstName", SqlDbType.NVarChar).Value = customer.First_Name;
                 command.Parameters.AddWithValue("@lastName", SqlDbType.NVarChar).Value = customer.Last_Name;
                 command.Parameters.AddWithValue("@address", SqlDbType.NVarChar).Value = customer.Address;
-                command.Parameters.AddWithValue("@phoneNumber", SqlDbType.NVarChar).Value = customer.Phone_Number;
                 command.Parameters.AddWithValue("@birthDay", SqlDbType.NVarChar).Value = customer.Birth_Day;
+                command.Parameters.AddWithValue("@phoneNumber", SqlDbType.NVarChar).Value = customer.Phone_Number;  
                 command.Parameters.AddWithValue("@email", SqlDbType.NVarChar).Value = customer.Email;
                 command.ExecuteNonQuery();
             }
@@ -62,16 +62,16 @@ namespace Supermarket_mvp._Repositories
                                             First_Name = @firstName,
                                             Last_Name = @lastName,
                                             Address = @address,
-                                            Phone_Number = @phoneNumber,
                                             Birth_Day = @birthDay, 
+                                            Phone_Number = @phoneNumber,                                      
                                             Email = @email
                                         WHERE Customer_Id = @id";
                 command.Parameters.AddWithValue("@documentNumber", SqlDbType.NVarChar).Value = customer.Document_Number;
                 command.Parameters.AddWithValue("@firstName", SqlDbType.NVarChar).Value = customer.First_Name;
                 command.Parameters.AddWithValue("@lastName", SqlDbType.NVarChar).Value = customer.Last_Name;
                 command.Parameters.AddWithValue("@address", SqlDbType.NVarChar).Value = customer.Address;
-                command.Parameters.AddWithValue("@phoneNumber", SqlDbType.NVarChar).Value = customer.Phone_Number;
                 command.Parameters.AddWithValue("@birthDay", SqlDbType.NVarChar).Value = customer.Birth_Day;
+                command.Parameters.AddWithValue("@phoneNumber", SqlDbType.NVarChar).Value = customer.Phone_Number;
                 command.Parameters.AddWithValue("@email", SqlDbType.NVarChar).Value = customer.Email;
                 command.Parameters.AddWithValue("@id", SqlDbType.Int).Value = customer.Customer_Id;
                 command.ExecuteNonQuery();
@@ -100,9 +100,9 @@ namespace Supermarket_mvp._Repositories
                             Document_Number = reader["Document_Number"].ToString(),
                             First_Name = reader["First_Name"].ToString(),
                             Last_Name = reader["Last_Name"].ToString(),
-                            Address = reader["Address"].ToString(),                            
-                            Phone_Number = reader["Phone_Number"].ToString(),
+                            Address = reader["Address"].ToString(),
                             Birth_Day = reader["Birth_Day"].ToString(),
+                            Phone_Number = reader["Phone_Number"].ToString(),           
                             Email = reader["Email"].ToString()
                         };
                         customersList.Add(customer);
@@ -142,8 +142,8 @@ namespace Supermarket_mvp._Repositories
                             First_Name = reader["First_Name"].ToString(),
                             Last_Name = reader["Last_Name"].ToString(),
                             Address = reader["Address"].ToString(),
-                            Phone_Number = reader["Phone_Number"].ToString(),
-                            Birth_Day = reader["Birth_Day"].ToString(),                       
+                            Birth_Day = reader["Birth_Day"].ToString(),
+                            Phone_Number = reader["Phone_Number"].ToString(),                  
                             Email = reader["Email"].ToString()
                         };
                         customersList.Add(customer);

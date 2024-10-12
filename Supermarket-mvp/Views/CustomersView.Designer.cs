@@ -40,6 +40,8 @@
             BtnNew = new Button();
             label2 = new Label();
             tabPageCustomersDetail = new TabPage();
+            TxtBirthDay = new TextBox();
+            label10 = new Label();
             BtnCancelar = new Button();
             BtnSave = new Button();
             TxtCustomersEmail = new TextBox();
@@ -58,8 +60,6 @@
             label3 = new Label();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            label10 = new Label();
-            TxtBirthDay = new TextBox();
             panel1.SuspendLayout();
             tabControl1.SuspendLayout();
             tabPageCustomersList.SuspendLayout();
@@ -70,10 +70,10 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(tabControl1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 454);
@@ -81,9 +81,9 @@
             // 
             // tabControl1
             // 
+            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabControl1.Controls.Add(tabPageCustomersList);
             tabControl1.Controls.Add(tabPageCustomersDetail);
-            tabControl1.Dock = DockStyle.Bottom;
             tabControl1.Location = new Point(0, 114);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -217,6 +217,23 @@
             tabPageCustomersDetail.TabIndex = 1;
             tabPageCustomersDetail.Text = "Customers Detail";
             tabPageCustomersDetail.UseVisualStyleBackColor = true;
+            // 
+            // TxtBirthDay
+            // 
+            TxtBirthDay.Location = new Point(544, 21);
+            TxtBirthDay.Name = "TxtBirthDay";
+            TxtBirthDay.PlaceholderText = "02/13/1999";
+            TxtBirthDay.Size = new Size(166, 31);
+            TxtBirthDay.TabIndex = 17;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(406, 24);
+            label10.Name = "label10";
+            label10.Size = new Size(84, 25);
+            label10.TabIndex = 16;
+            label10.Text = "Birth Day";
             // 
             // BtnCancelar
             // 
@@ -375,23 +392,6 @@
             label1.Size = new Size(143, 38);
             label1.TabIndex = 0;
             label1.Text = "Customer";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(406, 24);
-            label10.Name = "label10";
-            label10.Size = new Size(84, 25);
-            label10.TabIndex = 16;
-            label10.Text = "Birth Day";
-            // 
-            // TxtBirthDay
-            // 
-            TxtBirthDay.Location = new Point(544, 21);
-            TxtBirthDay.Name = "TxtBirthDay";
-            TxtBirthDay.PlaceholderText = "02/13/1999";
-            TxtBirthDay.Size = new Size(166, 31);
-            TxtBirthDay.TabIndex = 17;
             // 
             // CustomersView
             // 

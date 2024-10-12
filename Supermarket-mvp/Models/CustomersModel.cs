@@ -5,34 +5,34 @@ namespace Supermarket_mvp.Models
     internal class CustomersModel
     {
         [Key]
-        public int Customer_Id { get; set; } // Identificador del cliente
+        public int Customer_Id { get; set; } 
 
         [Required]
         [StringLength(50)]
-        public string Document_Number { get; set; } // Número de documento
+        public string Document_Number { get; set; } 
 
         [Required]
         [StringLength(50)]
-        public string First_Name { get; set; } // Primer nombre
+        public string First_Name { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Last_Name { get; set; } // Apellido
+        public string Last_Name { get; set; } 
 
         [Required]
         [StringLength(100)]
-        public string Address { get; set; } // Dirección
+        public string Address { get; set; } 
 
         [Required]
         [StringLength(10)]
-        public string Birth_Day { get; set; } // Fecha de nacimiento (almacenada como string)
+        public string Birth_Day { get; set; }
 
         [Required]
         [StringLength(15)]
-        public string Phone_Number { get; set; } // Número de teléfono
+        public string Phone_Number { get; set; } 
 
         [Required]
         [StringLength(100)]
-        public string Email { get; set; } // Correo electrónico
+        public string Email { get; set; }
     }
 }

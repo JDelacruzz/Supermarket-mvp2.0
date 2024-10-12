@@ -60,20 +60,20 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(tabControl1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 452);
+            panel1.Size = new Size(800, 457);
             panel1.TabIndex = 0;
             // 
             // tabControl1
             // 
+            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabControl1.Controls.Add(tabPagePayModeList);
             tabControl1.Controls.Add(tabPagePayModeDetail);
-            tabControl1.Dock = DockStyle.Bottom;
             tabControl1.Location = new Point(0, 109);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
