@@ -20,7 +20,6 @@ namespace Supermarket_mvp.Presenters
             this.view = view;
             this.repository = repository;
 
-            // Asociar eventos de la vista con los métodos del presentador
             this.view.SearchEvent += SearchCustomer;
             this.view.AddNewEvent += AddNewCustomer;
             this.view.EditEvent += LoadSelectedCustomerToEdit;
@@ -28,39 +27,46 @@ namespace Supermarket_mvp.Presenters
             this.view.SaveEvent += SaveCustomer;
             this.view.CancelEvent += CancelAction;
 
-            // Asignar la lista de clientes a la vista
             this.view.SetCustomerListBindingSource(customersBindingSource);
 
-            // Cargar la lista completa de clientes
             LoadAllCustomerList();
 
-            // Mostrar la vista
+            
             this.view.Show();
         }
 
-        // Cargar todos los clientes
+        
         private void LoadAllCustomerList()
         {
             customersList = repository.GetAll();
             customersBindingSource.DataSource = customersList;
         }
 
-        // Limpiar los campos de la vista
-       
+        
+        private void ClearSearchField()
+        {
+            view.SearchValue = string.Empty;
+        }
 
-        // Cancelar la operación
         private void CancelAction(object? sender, EventArgs e)
         {
             LoadAllCustomerList();
         }
 
-        // Guardar un cliente (Agregar o Editar)
+        
         private void SaveCustomer(object? sender, EventArgs e)
         {
-            // Crear un nuevo objeto cliente basado en los datos de la vista
+            
+            int customerId = 0;
+            if (!string.IsNullOrEmpty(view.Id))
+            {
+                customerId = Convert.ToInt32(view.Id);
+            }
+
+            
             var customer = new CustomersModel
             {
-                Customer_Id = Convert.ToInt32(view.Id),
+                Customer_Id = customerId,
                 Document_Number = view.DocumentNumber,
                 First_Name = view.FirstName,
                 Last_Name = view.LastName,
@@ -74,20 +80,20 @@ namespace Supermarket_mvp.Presenters
             {
                 new Common.ModelDataValidation().Validate(customer);
 
-                if (view.IsEdit)
+                if (view.IsEdit) 
                 {
                     repository.Edit(customer);
-                    view.Message = "Customer edited successfully.";
+                    view.Message = "Cliente editado correctamente.";
                 }
-                else
+                else 
                 {
                     repository.Add(customer);
-                    view.Message = "Customer added successfully.";
+                    view.Message = "Cliente añadido correctamente.";
                 }
 
                 view.IsSuccessful = true;
                 LoadAllCustomerList();
-               
+                ClearSearchField(); 
             }
             catch (Exception ex)
             {
@@ -96,7 +102,6 @@ namespace Supermarket_mvp.Presenters
             }
         }
 
-        // Eliminar el cliente seleccionado
         private void DeleteSelectedCustomer(object? sender, EventArgs e)
         {
             try
@@ -104,17 +109,16 @@ namespace Supermarket_mvp.Presenters
                 var customer = (CustomersModel)customersBindingSource.Current;
                 repository.Delete(customer.Customer_Id);
                 view.IsSuccessful = true;
-                view.Message = "Customer deleted successfully.";
+                view.Message = "Cliente eliminado correctamente.";
                 LoadAllCustomerList();
             }
             catch (Exception ex)
             {
                 view.IsSuccessful = false;
-                view.Message = "An error occurred, could not delete the customer.";
+                view.Message = "Error al eliminar el cliente.";
             }
         }
 
-        // Cargar el cliente seleccionado para editar
         private void LoadSelectedCustomerToEdit(object? sender, EventArgs e)
         {
             var customer = (CustomersModel)customersBindingSource.Current;
@@ -130,16 +134,17 @@ namespace Supermarket_mvp.Presenters
 
             view.IsEdit = true;
         }
+
         private void AddNewCustomer(object? sender, EventArgs e)
         {
             view.IsEdit = false;
             LoadAllCustomerList();
         }
-        // Buscar clientes (por documento o nombre)
+
         private void SearchCustomer(object? sender, EventArgs e)
         {
             bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
-            if (emptyValue == false)
+            if (!emptyValue)
             {
                 customersList = repository.GetByValue(this.view.SearchValue);
             }
