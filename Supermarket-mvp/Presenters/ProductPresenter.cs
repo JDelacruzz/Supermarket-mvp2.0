@@ -28,13 +28,10 @@ namespace Supermarket_mvp.Presenters
             this.view.SaveEvent += SaveProduct;
             this.view.CancelEvent += CancelAction;
 
-            // Asociar la lista de productos con la vista
             this.view.SetProductListBindingSource(productBindingSource);
 
-            // Cargar todos los productos
             LoadAllProductList();
 
-            // Mostrar la vista
             this.view.Show();
         }
 
