@@ -20,7 +20,6 @@ namespace Supermarket_mvp.Presenters
             this.view = view;
             this.repository = repository;
 
-            // Asociar eventos de la vista con los métodos del presentador
             this.view.SearchEvent += SearchProduct;
             this.view.AddNewEvent += AddNewProduct;
             this.view.EditEvent += LoadSelectedProductToEdit;
@@ -28,43 +27,33 @@ namespace Supermarket_mvp.Presenters
             this.view.SaveEvent += SaveProduct;
             this.view.CancelEvent += CancelAction;
 
-            // Asignar la lista de productos a la vista
             this.view.SetProductListBindingSource(productBindingSource);
 
-            // Cargar la lista completa de productos
             LoadAllProductList();
-
-            // Mostrar la vista
             this.view.Show();
         }
 
-        // Cargar todos los productos
         private void LoadAllProductList()
         {
             productList = repository.GetAll();
             productBindingSource.DataSource = productList;
         }
 
-        // Cancelar la operación
         private void CancelAction(object? sender, EventArgs e)
         {
             LoadAllProductList();
         }
 
-        // Agregar un nuevo producto
         private void AddNewProduct(object? sender, EventArgs e)
         {
             view.IsEdit = false;
             LoadAllProductList();
         }
 
-        // Guardar producto (Agregar o Editar)
         private void SaveProduct(object? sender, EventArgs e)
         {
-            // Crear un nuevo producto basado en los datos de la vista
             var product = new ProductModel();
 
-            // Validar que los campos no estén vacíos o sean inválidos antes de convertir
             if (!string.IsNullOrWhiteSpace(view.Id) && int.TryParse(view.Id, out int productId))
             {
                 product.Product_Id = productId;
@@ -132,8 +121,6 @@ namespace Supermarket_mvp.Presenters
             }
         }
 
-
-        // Eliminar el producto seleccionado
         private void DeleteSelectedProduct(object? sender, EventArgs e)
         {
             try
@@ -151,7 +138,6 @@ namespace Supermarket_mvp.Presenters
             }
         }
 
-        // Cargar el producto seleccionado para editar
         private void LoadSelectedProductToEdit(object? sender, EventArgs e)
         {
             var product = (ProductModel)productBindingSource.Current;
@@ -165,7 +151,6 @@ namespace Supermarket_mvp.Presenters
             view.IsEdit = true;
         }
 
-        // Buscar productos (Por nombre o categoría)
         private void SearchProduct(object? sender, EventArgs e)
         {
             bool emptyValue = string.IsNullOrWhiteSpace(this.view.SearchValue);
