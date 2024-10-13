@@ -117,19 +117,25 @@ namespace Supermarket_mvp._Repositories
         public IEnumerable<CustomersModel> GetByValue(string value)
         {
             var customersList = new List<CustomersModel>();
-            int customerId = int.TryParse(value, out _) ? Convert.ToInt32(value) : 0;
-            string documentNumber = value;
 
             using (var connection = new SqlConnection(connectionString))
             using (var command = new SqlCommand())
             {
                 connection.Open();
                 command.Connection = connection;
-                command.CommandText = @"SELECT * FROM Customer
-                                        WHERE Customer_Id = @id OR Document_Number LIKE @documentNumber + '%'
-                                        ORDER BY Customer_Id DESC";
-                command.Parameters.AddWithValue("@id", SqlDbType.Int).Value = customerId;
-                command.Parameters.AddWithValue("@documentNumber", SqlDbType.NVarChar).Value = documentNumber;
+
+                // Comando SQL ajustado para buscar por diferentes campos (Document_Number, First_Name, Last_Name)
+                command.CommandText = @"
+            SELECT * FROM Customer
+            WHERE Customer_Id = @id 
+            OR Document_Number LIKE @searchValue + '%'
+            OR First_Name LIKE @searchValue + '%'
+            OR Last_Name LIKE @searchValue + '%'
+            ORDER BY Customer_Id DESC";
+
+                // Asignación de parámetros para Customer_Id y búsqueda general
+                command.Parameters.AddWithValue("@id", SqlDbType.Int).Value = int.TryParse(value, out int id) ? id : 0;
+                command.Parameters.AddWithValue("@searchValue", SqlDbType.NVarChar).Value = value;
 
                 using (var reader = command.ExecuteReader())
                 {
@@ -143,7 +149,7 @@ namespace Supermarket_mvp._Repositories
                             Last_Name = reader["Last_Name"].ToString(),
                             Address = reader["Address"].ToString(),
                             Birth_Day = reader["Birth_Day"].ToString(),
-                            Phone_Number = reader["Phone_Number"].ToString(),                  
+                            Phone_Number = reader["Phone_Number"].ToString(),
                             Email = reader["Email"].ToString()
                         };
                         customersList.Add(customer);
@@ -153,5 +159,6 @@ namespace Supermarket_mvp._Repositories
 
             return customersList;
         }
+
     }
 }

@@ -152,7 +152,10 @@ namespace Supermarket_mvp.Presenters
             {
                 customersList = repository.GetAll();
             }
+
             customersBindingSource.DataSource = customersList;
         }
+
+
     }
 }

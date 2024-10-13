@@ -101,7 +101,7 @@
             // BtnClose
             // 
             BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnClose.Image = Properties.Resources.cerrar;
+            BtnClose.Image = Properties.Resources.cerrar_sesion;
             BtnClose.Location = new Point(671, 347);
             BtnClose.Name = "BtnClose";
             BtnClose.Size = new Size(186, 82);
@@ -111,7 +111,7 @@
             // BtnDelete
             // 
             BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Image = Properties.Resources.carpeta;
             BtnDelete.Location = new Point(671, 249);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.Size = new Size(186, 82);
@@ -121,7 +121,7 @@
             // BtnEdit
             // 
             BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEdit.Image = Properties.Resources.edit;
+            BtnEdit.Image = Properties.Resources.nota;
             BtnEdit.Location = new Point(671, 153);
             BtnEdit.Name = "BtnEdit";
             BtnEdit.Size = new Size(186, 82);
@@ -131,7 +131,7 @@
             // BtnNew
             // 
             BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNew.Image = Properties.Resources._new;
+            BtnNew.Image = Properties.Resources.guardar_el_archivo__2_;
             BtnNew.Location = new Point(671, 53);
             BtnNew.Name = "BtnNew";
             BtnNew.Size = new Size(186, 82);
@@ -193,7 +193,7 @@
             tabPagePayModeDetail.Location = new Point(4, 34);
             tabPagePayModeDetail.Name = "tabPagePayModeDetail";
             tabPagePayModeDetail.Padding = new Padding(3);
-            tabPagePayModeDetail.Size = new Size(865, 377);
+            tabPagePayModeDetail.Size = new Size(865, 457);
             tabPagePayModeDetail.TabIndex = 1;
             tabPagePayModeDetail.Text = "Pay Mode Detail";
             tabPagePayModeDetail.UseVisualStyleBackColor = true;
@@ -272,7 +272,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.buy;
+            pictureBox1.Image = Properties.Resources.billetera;
             pictureBox1.Location = new Point(44, 10);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(108, 93);

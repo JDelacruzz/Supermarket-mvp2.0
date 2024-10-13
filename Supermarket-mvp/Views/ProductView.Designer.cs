@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductView));
             panel1 = new Panel();
             tabControl1 = new TabControl();
             tabPageProductList = new TabPage();
@@ -106,7 +105,7 @@
             // BtnClose
             // 
             BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnClose.Image = Properties.Resources.cerrar;
+            BtnClose.Image = Properties.Resources.cerrar_sesion;
             BtnClose.Location = new Point(587, 371);
             BtnClose.Name = "BtnClose";
             BtnClose.Size = new Size(186, 82);
@@ -116,7 +115,7 @@
             // BtnDelete
             // 
             BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Image = Properties.Resources.carpeta;
             BtnDelete.Location = new Point(587, 272);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.Size = new Size(186, 82);
@@ -126,7 +125,7 @@
             // BtnEdit
             // 
             BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEdit.Image = Properties.Resources.edit;
+            BtnEdit.Image = Properties.Resources.nota;
             BtnEdit.Location = new Point(587, 175);
             BtnEdit.Name = "BtnEdit";
             BtnEdit.Size = new Size(186, 82);
@@ -136,7 +135,7 @@
             // BtnNew
             // 
             BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNew.Image = (Image)resources.GetObject("BtnNew.Image");
+            BtnNew.Image = Properties.Resources.guardar_el_archivo__2_;
             BtnNew.Location = new Point(587, 64);
             BtnNew.Name = "BtnNew";
             BtnNew.Size = new Size(186, 82);

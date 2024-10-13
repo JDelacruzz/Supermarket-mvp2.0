@@ -66,7 +66,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 446);
+            panel1.Size = new Size(800, 561);
             panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -77,7 +77,7 @@
             tabControl1.Location = new Point(0, 102);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(800, 344);
+            tabControl1.Size = new Size(800, 459);
             tabControl1.TabIndex = 2;
             // 
             // tabPageCategoriesList
@@ -93,7 +93,7 @@
             tabPageCategoriesList.Location = new Point(4, 34);
             tabPageCategoriesList.Name = "tabPageCategoriesList";
             tabPageCategoriesList.Padding = new Padding(3);
-            tabPageCategoriesList.Size = new Size(792, 306);
+            tabPageCategoriesList.Size = new Size(792, 421);
             tabPageCategoriesList.TabIndex = 0;
             tabPageCategoriesList.Text = "Categories List";
             tabPageCategoriesList.UseVisualStyleBackColor = true;
@@ -101,10 +101,10 @@
             // BtnClose
             // 
             BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(602, 240);
+            BtnClose.Image = Properties.Resources.cerrar_sesion;
+            BtnClose.Location = new Point(585, 322);
             BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(112, 38);
+            BtnClose.Size = new Size(186, 82);
             BtnClose.TabIndex = 17;
             BtnClose.UseVisualStyleBackColor = true;
             // 
@@ -115,20 +115,20 @@
             DgCategories.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             DgCategories.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgCategories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DgCategories.Location = new Point(8, 85);
+            DgCategories.Location = new Point(8, 68);
             DgCategories.Name = "DgCategories";
             DgCategories.ReadOnly = true;
             DgCategories.RowHeadersWidth = 62;
-            DgCategories.Size = new Size(547, 204);
+            DgCategories.Size = new Size(547, 336);
             DgCategories.TabIndex = 13;
             // 
             // BtnDelete
             // 
             BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(602, 183);
+            BtnDelete.Image = Properties.Resources.carpeta;
+            BtnDelete.Location = new Point(585, 229);
             BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(112, 36);
+            BtnDelete.Size = new Size(186, 82);
             BtnDelete.TabIndex = 16;
             BtnDelete.UseVisualStyleBackColor = true;
             // 
@@ -136,7 +136,7 @@
             // 
             BtnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnSearch.Image = Properties.Resources.informacion;
-            BtnSearch.Location = new Point(456, 40);
+            BtnSearch.Location = new Point(456, 23);
             BtnSearch.Name = "BtnSearch";
             BtnSearch.Size = new Size(99, 39);
             BtnSearch.TabIndex = 12;
@@ -145,27 +145,27 @@
             // BtnEdit
             // 
             BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(602, 122);
+            BtnEdit.Image = Properties.Resources.nota;
+            BtnEdit.Location = new Point(585, 124);
             BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(112, 37);
+            BtnEdit.Size = new Size(186, 82);
             BtnEdit.TabIndex = 15;
             BtnEdit.UseVisualStyleBackColor = true;
             // 
             // BtnNew
             // 
             BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(602, 64);
+            BtnNew.Image = Properties.Resources.guardar_el_archivo__2_;
+            BtnNew.Location = new Point(585, 23);
             BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(112, 40);
+            BtnNew.Size = new Size(186, 82);
             BtnNew.TabIndex = 14;
             BtnNew.UseVisualStyleBackColor = true;
             // 
             // TxtSearch
             // 
             TxtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtSearch.Location = new Point(8, 48);
+            TxtSearch.Location = new Point(6, 31);
             TxtSearch.Name = "TxtSearch";
             TxtSearch.PlaceholderText = "Data to Search";
             TxtSearch.Size = new Size(442, 31);
@@ -174,7 +174,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(8, 20);
+            label2.Location = new Point(8, 3);
             label2.Name = "label2";
             label2.Size = new Size(116, 25);
             label2.TabIndex = 0;
@@ -294,7 +294,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 485);
+            ClientSize = new Size(800, 600);
             Controls.Add(panel1);
             Name = "CategoriesView";
             Text = "Categories Management";

@@ -22,12 +22,11 @@ namespace Supermarket_mvp.Views
             InitializeComponent();
             AssociateAndRaiseViewEvents();
 
-            tabControl1.TabPages.Remove(tabPageCustomersDetail); // Remover la pestaña de detalles al iniciar
+            tabControl1.TabPages.Remove(tabPageCustomersDetail);
 
-            BtnClose.Click += delegate { this.Close(); }; // Evento para cerrar la ventana
+            BtnClose.Click += delegate { this.Close(); };
         }
 
-        // Asignar eventos a los controles de la vista
         private void AssociateAndRaiseViewEvents()
         {
             BtnSearch.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
@@ -39,29 +38,26 @@ namespace Supermarket_mvp.Views
                 }
             };
 
-            // Evento para agregar un nuevo cliente
             BtnNew.Click += delegate {
                 AddNewEvent?.Invoke(this, EventArgs.Empty);
 
                 tabControl1.TabPages.Remove(tabPageCustomersList);
                 tabControl1.TabPages.Add(tabPageCustomersDetail);
-                tabPageCustomersDetail.Text = "Add New Customer"; // Cambiar el título de la pestaña
+                tabPageCustomersDetail.Text = "Agregar Nuevo Cliente";
             };
 
-            // Evento para editar el cliente seleccionado
             BtnEdit.Click += delegate {
                 EditEvent?.Invoke(this, EventArgs.Empty);
 
                 tabControl1.TabPages.Remove(tabPageCustomersList);
                 tabControl1.TabPages.Add(tabPageCustomersDetail);
-                tabPageCustomersDetail.Text = "Edit Customer"; // Cambiar el título de la pestaña
+                tabPageCustomersDetail.Text = "Editar Cliente";
             };
 
-            // Evento para eliminar el cliente seleccionado
             BtnDelete.Click += delegate {
                 var result = MessageBox.Show(
-                    "Are you sure you want to delete the selected Customer?",
-                    "Warning",
+                    "¿Estás seguro de que deseas eliminar el cliente seleccionado?",
+                    "Advertencia",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning);
 
@@ -72,20 +68,18 @@ namespace Supermarket_mvp.Views
                 }
             };
 
-            // Evento para guardar el cliente
             BtnSave.Click += delegate
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
 
-                if (isSuccessful) // Si grabar fue exitoso
+                if (isSuccessful)
                 {
                     tabControl1.TabPages.Remove(tabPageCustomersDetail);
                     tabControl1.TabPages.Add(tabPageCustomersList);
                 }
-                MessageBox.Show(Message); // Mostrar el mensaje después de guardar
+                MessageBox.Show(Message);
             };
 
-            // Evento para cancelar la operación
             BtnCancelar.Click += delegate {
                 CancelEvent?.Invoke(this, EventArgs.Empty);
 
@@ -93,8 +87,6 @@ namespace Supermarket_mvp.Views
                 tabControl1.TabPages.Add(tabPageCustomersList);
             };
         }
-
-        // Propiedades de la vista
 
         public string Id
         {
@@ -168,13 +160,11 @@ namespace Supermarket_mvp.Views
             set { message = value; }
         }
 
-        // Método para asociar la lista de clientes al DataGridView
         public void SetCustomerListBindingSource(BindingSource customerList)
         {
             DgCustomers.DataSource = customerList;
         }
 
-        // Patrón singleton para controlar solo una instancia del formulario
         private static CustomersView instance;
 
         public static CustomersView GetInstance(Form parentContainer)

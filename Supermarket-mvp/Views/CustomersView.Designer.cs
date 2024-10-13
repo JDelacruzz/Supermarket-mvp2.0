@@ -112,7 +112,7 @@
             // BtnClose
             // 
             BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnClose.Image = Properties.Resources.cerrar;
+            BtnClose.Image = Properties.Resources.cerrar_sesion;
             BtnClose.Location = new Point(571, 307);
             BtnClose.Name = "BtnClose";
             BtnClose.Size = new Size(186, 82);
@@ -136,7 +136,7 @@
             // BtnDelete
             // 
             BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnDelete.Image = Properties.Resources.delete;
+            BtnDelete.Image = Properties.Resources.carpeta;
             BtnDelete.Location = new Point(571, 212);
             BtnDelete.Name = "BtnDelete";
             BtnDelete.Size = new Size(186, 82);
@@ -156,7 +156,7 @@
             // BtnEdit
             // 
             BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnEdit.Image = Properties.Resources.edit;
+            BtnEdit.Image = Properties.Resources.nota;
             BtnEdit.Location = new Point(571, 115);
             BtnEdit.Name = "BtnEdit";
             BtnEdit.Size = new Size(186, 82);
