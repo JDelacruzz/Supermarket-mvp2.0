@@ -97,7 +97,7 @@
             // 
             // BtnPayMode
             // 
-            BtnPayMode.BackgroundImage = Properties.Resources.buy;
+            BtnPayMode.BackgroundImage = (Image)resources.GetObject("BtnPayMode.BackgroundImage");
             BtnPayMode.BackgroundImageLayout = ImageLayout.Zoom;
             BtnPayMode.Location = new Point(-3, 139);
             BtnPayMode.Name = "BtnPayMode";

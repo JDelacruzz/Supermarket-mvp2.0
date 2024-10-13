@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomersView));
             panel1 = new Panel();
             tabControl1 = new TabControl();
             tabPageCustomersList = new TabPage();
@@ -76,7 +77,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 454);
+            panel1.Size = new Size(800, 549);
             panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -87,7 +88,7 @@
             tabControl1.Location = new Point(0, 114);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(800, 340);
+            tabControl1.Size = new Size(800, 435);
             tabControl1.TabIndex = 2;
             // 
             // tabPageCustomersList
@@ -103,7 +104,7 @@
             tabPageCustomersList.Location = new Point(4, 34);
             tabPageCustomersList.Name = "tabPageCustomersList";
             tabPageCustomersList.Padding = new Padding(3);
-            tabPageCustomersList.Size = new Size(792, 302);
+            tabPageCustomersList.Size = new Size(792, 397);
             tabPageCustomersList.TabIndex = 0;
             tabPageCustomersList.Text = "Customers List";
             tabPageCustomersList.UseVisualStyleBackColor = true;
@@ -112,9 +113,9 @@
             // 
             BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(593, 245);
+            BtnClose.Location = new Point(571, 307);
             BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(139, 38);
+            BtnClose.Size = new Size(186, 82);
             BtnClose.TabIndex = 11;
             BtnClose.UseVisualStyleBackColor = true;
             // 
@@ -129,16 +130,16 @@
             DgCustomers.Name = "DgCustomers";
             DgCustomers.ReadOnly = true;
             DgCustomers.RowHeadersWidth = 62;
-            DgCustomers.Size = new Size(494, 225);
+            DgCustomers.Size = new Size(494, 320);
             DgCustomers.TabIndex = 3;
             // 
             // BtnDelete
             // 
             BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(593, 188);
+            BtnDelete.Location = new Point(571, 212);
             BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(139, 36);
+            BtnDelete.Size = new Size(186, 82);
             BtnDelete.TabIndex = 10;
             BtnDelete.UseVisualStyleBackColor = true;
             // 
@@ -156,9 +157,9 @@
             // 
             BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(593, 127);
+            BtnEdit.Location = new Point(571, 115);
             BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(139, 37);
+            BtnEdit.Size = new Size(186, 82);
             BtnEdit.TabIndex = 9;
             BtnEdit.UseVisualStyleBackColor = true;
             // 
@@ -174,10 +175,10 @@
             // BtnNew
             // 
             BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(593, 69);
+            BtnNew.Image = (Image)resources.GetObject("BtnNew.Image");
+            BtnNew.Location = new Point(571, 15);
             BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(139, 40);
+            BtnNew.Size = new Size(186, 82);
             BtnNew.TabIndex = 8;
             BtnNew.UseVisualStyleBackColor = true;
             // 
@@ -213,7 +214,7 @@
             tabPageCustomersDetail.Location = new Point(4, 34);
             tabPageCustomersDetail.Name = "tabPageCustomersDetail";
             tabPageCustomersDetail.Padding = new Padding(3);
-            tabPageCustomersDetail.Size = new Size(792, 302);
+            tabPageCustomersDetail.Size = new Size(792, 397);
             tabPageCustomersDetail.TabIndex = 1;
             tabPageCustomersDetail.Text = "Customers Detail";
             tabPageCustomersDetail.UseVisualStyleBackColor = true;
@@ -397,7 +398,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 545);
             Controls.Add(panel1);
             Name = "CustomersView";
             Text = "Customers Management";

@@ -73,6 +73,16 @@ namespace Supermarket_mvp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap billetera {
+            get {
+                object obj = ResourceManager.GetObject("billetera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buy {
             get {
                 object obj = ResourceManager.GetObject("buy", resourceCulture);
@@ -93,9 +103,29 @@ namespace Supermarket_mvp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carpeta {
+            get {
+                object obj = ResourceManager.GetObject("carpeta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar {
             get {
                 object obj = ResourceManager.GetObject("cerrar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerrar_sesion {
+            get {
+                object obj = ResourceManager.GetObject("cerrar-sesion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +163,16 @@ namespace Supermarket_mvp.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap guardar_el_archivo__2_ {
+            get {
+                object obj = ResourceManager.GetObject("guardar-el-archivo (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap informacion {
             get {
                 object obj = ResourceManager.GetObject("informacion", resourceCulture);
@@ -146,6 +186,16 @@ namespace Supermarket_mvp.Properties {
         internal static System.Drawing.Bitmap Initial_D__Fujiwara_Tofu_Shop___Anime_ver___Gerbe_Dumahil {
             get {
                 object obj = ResourceManager.GetObject("Initial D_ Fujiwara Tofu Shop - Anime ver_, Gerbe Dumahil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nota {
+            get {
+                object obj = ResourceManager.GetObject("nota", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductView));
             panel1 = new Panel();
             tabControl1 = new TabControl();
             tabPageProductList = new TabPage();
@@ -70,7 +71,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 516);
+            panel1.Size = new Size(800, 656);
             panel1.TabIndex = 0;
             // 
             // tabControl1
@@ -81,7 +82,7 @@
             tabControl1.Location = new Point(0, 143);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(800, 373);
+            tabControl1.Size = new Size(800, 513);
             tabControl1.TabIndex = 2;
             // 
             // tabPageProductList
@@ -97,7 +98,7 @@
             tabPageProductList.Location = new Point(4, 34);
             tabPageProductList.Name = "tabPageProductList";
             tabPageProductList.Padding = new Padding(3);
-            tabPageProductList.Size = new Size(792, 335);
+            tabPageProductList.Size = new Size(792, 475);
             tabPageProductList.TabIndex = 0;
             tabPageProductList.Text = "Product List";
             tabPageProductList.UseVisualStyleBackColor = true;
@@ -106,9 +107,9 @@
             // 
             BtnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnClose.Image = Properties.Resources.cerrar;
-            BtnClose.Location = new Point(587, 270);
+            BtnClose.Location = new Point(587, 371);
             BtnClose.Name = "BtnClose";
-            BtnClose.Size = new Size(122, 38);
+            BtnClose.Size = new Size(186, 82);
             BtnClose.TabIndex = 11;
             BtnClose.UseVisualStyleBackColor = true;
             // 
@@ -116,9 +117,9 @@
             // 
             BtnDelete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnDelete.Image = Properties.Resources.delete;
-            BtnDelete.Location = new Point(587, 213);
+            BtnDelete.Location = new Point(587, 272);
             BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(122, 36);
+            BtnDelete.Size = new Size(186, 82);
             BtnDelete.TabIndex = 10;
             BtnDelete.UseVisualStyleBackColor = true;
             // 
@@ -126,19 +127,19 @@
             // 
             BtnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             BtnEdit.Image = Properties.Resources.edit;
-            BtnEdit.Location = new Point(587, 152);
+            BtnEdit.Location = new Point(587, 175);
             BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(122, 37);
+            BtnEdit.Size = new Size(186, 82);
             BtnEdit.TabIndex = 9;
             BtnEdit.UseVisualStyleBackColor = true;
             // 
             // BtnNew
             // 
             BtnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            BtnNew.Image = Properties.Resources._new;
-            BtnNew.Location = new Point(587, 94);
+            BtnNew.Image = (Image)resources.GetObject("BtnNew.Image");
+            BtnNew.Location = new Point(587, 64);
             BtnNew.Name = "BtnNew";
-            BtnNew.Size = new Size(122, 40);
+            BtnNew.Size = new Size(186, 82);
             BtnNew.TabIndex = 8;
             BtnNew.UseVisualStyleBackColor = true;
             // 
@@ -153,7 +154,7 @@
             DgProductList.Name = "DgProductList";
             DgProductList.ReadOnly = true;
             DgProductList.RowHeadersWidth = 62;
-            DgProductList.Size = new Size(511, 225);
+            DgProductList.Size = new Size(511, 365);
             DgProductList.TabIndex = 3;
             // 
             // BtnSearch
@@ -201,7 +202,7 @@
             tabPageProductDetail.Location = new Point(4, 34);
             tabPageProductDetail.Name = "tabPageProductDetail";
             tabPageProductDetail.Padding = new Padding(3);
-            tabPageProductDetail.Size = new Size(792, 335);
+            tabPageProductDetail.Size = new Size(792, 475);
             tabPageProductDetail.TabIndex = 1;
             tabPageProductDetail.Text = "Product Detail";
             tabPageProductDetail.UseVisualStyleBackColor = true;
@@ -335,7 +336,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 519);
+            ClientSize = new Size(800, 659);
             Controls.Add(panel1);
             Name = "ProductView";
             Text = "Product Management";
