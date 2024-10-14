@@ -25,7 +25,7 @@ namespace Supermarket_mvp.Models
         public int ProductStock { get; set; }
 
         [Required(ErrorMessage = "El ID de la categoría es requerido.")]
-        [Range(0, 100, ErrorMessage = "El ID de la categoría debe estar entre 0 y 100.")]
+        [Range(0, 10000, ErrorMessage = "El ID de la categoría debe estar entre 0 y 10000.")]
         [DisplayName("Category Id")]
         public int CategoryId { get; set; }
     }

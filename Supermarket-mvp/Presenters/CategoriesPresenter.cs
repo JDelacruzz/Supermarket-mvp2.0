@@ -31,21 +31,21 @@ namespace Supermarket_mvp.Presenters
             // Asignar la lista de categorías a la vista
             this.view.SetCategoryListBindingSource(categoriesBindingSource);
 
-            // Cargar la lista completa de categorías
+           
             LoadAllCategoryList();
 
-            // Mostrar la vista
+            
             this.view.Show();
         }
 
-        // Cargar todas las categorías
+        
         private void LoadAllCategoryList()
         {
             categoriesList = repository.GetAll();
             categoriesBindingSource.DataSource = categoriesList;
         }
 
-        // Limpiar los campos de la vista
+       
         private void CleanViewFields()
         {
             view.Id = "0";
@@ -53,16 +53,16 @@ namespace Supermarket_mvp.Presenters
             view.Description = "";
         }
 
-        // Cancelar la operación
+        
         private void CancelAction(object? sender, EventArgs e)
         {
             CleanViewFields();
         }
 
-        // Guardar una categoría (Agregar o Editar)
+        
         private void SaveCategory(object? sender, EventArgs e)
         {
-            // Crear un nuevo objeto categoría basado en los datos de la vista
+            
             var category = new CategoriesModel
             {
                 Id = Convert.ToInt32(view.Id),
