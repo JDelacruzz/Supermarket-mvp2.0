@@ -1,38 +1,47 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace Supermarket_mvp.Models
 {
     internal class CustomersModel
     {
         [Key]
-        public int Customer_Id { get; set; }  // Identificador del cliente
+        [DisplayName("ID del Cliente")]
+        public int Customer_Id { get; set; }  
 
-        [Required(ErrorMessage = "Document number es requerido.")]
-        [StringLength(50, ErrorMessage = "Document number debe tener un máximo de 50 caracteres.")]
-        public string Document_Number { get; set; }  // Número de documento
+        [Required(ErrorMessage = "El número de documento es requerido.")]
+        [StringLength(50, ErrorMessage = "El número de documento debe tener un máximo de 50 caracteres.")]
+        [DisplayName("Número de Documento")]
+        public string Document_Number { get; set; }  
 
-        [Required(ErrorMessage = "First name es requerido.")]
-        [StringLength(50, ErrorMessage = "First name debe tener un máximo de 50 caracteres.")]
-        public string First_Name { get; set; }  // Primer nombre
+        [Required(ErrorMessage = "El primer nombre es requerido.")]
+        [StringLength(50, ErrorMessage = "El primer nombre debe tener un máximo de 50 caracteres.")]
+        [DisplayName("Primer Nombre")]
+        public string First_Name { get; set; }  
 
-        [Required(ErrorMessage = "Last name es requerido.")]
-        [StringLength(50, ErrorMessage = "Last name debe tener un máximo de 50 caracteres.")]
-        public string Last_Name { get; set; }  // Apellido
+        [Required(ErrorMessage = "El apellido es requerido.")]
+        [StringLength(50, ErrorMessage = "El apellido debe tener un máximo de 50 caracteres.")]
+        [DisplayName("Apellido")]
+        public string Last_Name { get; set; }  
 
-        [Required(ErrorMessage = "Address es requerido.")]
-        [StringLength(100, ErrorMessage = "Address debe tener un máximo de 100 caracteres.")]
-        public string Address { get; set; }  // Dirección
+        [Required(ErrorMessage = "La dirección es requerida.")]
+        [StringLength(100, ErrorMessage = "La dirección debe tener un máximo de 100 caracteres.")]
+        [DisplayName("Dirección")]
+        public string Address { get; set; }  
 
-        [Required(ErrorMessage = "Birth day es requerido.")]
-        [StringLength(10, ErrorMessage = "Birth day debe tener un máximo de 10 caracteres.")]
-        public string Birth_Day { get; set; }  // Fecha de nacimiento (almacenada como cadena)
+        [Required(ErrorMessage = "La fecha de nacimiento es requerida.")]
+        [StringLength(10, ErrorMessage = "La fecha de nacimiento debe tener un máximo de 10 caracteres.")]
+        [DisplayName("Fecha de Nacimiento")]
+        public string Birth_Day { get; set; } 
 
-        [Required(ErrorMessage = "Phone number es requerido.")]
-        [StringLength(15, ErrorMessage = "Phone number debe tener un máximo de 15 caracteres.")]
-        public string Phone_Number { get; set; }  // Número de teléfono
+        [Required(ErrorMessage = "El número de teléfono es requerido.")]
+        [StringLength(15, ErrorMessage = "El número de teléfono debe tener un máximo de 15 caracteres.")]
+        [DisplayName("Número de Teléfono")]
+        public string Phone_Number { get; set; } 
 
-        [Required(ErrorMessage = "Email es requerido.")]
-        [StringLength(100, ErrorMessage = "Email debe tener un máximo de 100 caracteres.")]
-        public string Email { get; set; }  // Correo electrónico
+        [Required(ErrorMessage = "El correo electrónico es requerido.")]
+        [StringLength(100, ErrorMessage = "El correo electrónico debe tener un máximo de 100 caracteres.")]
+        [DisplayName("Correo Electrónico")]
+        public string Email { get; set; }  
     }
 }

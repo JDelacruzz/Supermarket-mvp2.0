@@ -56,7 +56,7 @@ namespace Supermarket_mvp.Presenters
 
             if (!string.IsNullOrWhiteSpace(view.Id) && int.TryParse(view.Id, out int productId))
             {
-                product.Product_Id = productId;
+                product.ProductId = productId;
             }
             else
             {
@@ -66,7 +66,7 @@ namespace Supermarket_mvp.Presenters
 
             if (!string.IsNullOrWhiteSpace(view.Price) && decimal.TryParse(view.Price, out decimal productPrice))
             {
-                product.Product_Price = productPrice;
+                product.ProductPrice = productPrice;
             }
             else
             {
@@ -76,7 +76,7 @@ namespace Supermarket_mvp.Presenters
 
             if (!string.IsNullOrWhiteSpace(view.Stock) && int.TryParse(view.Stock, out int productStock))
             {
-                product.Product_Stock = productStock;
+                product.ProductStock = productStock;
             }
             else
             {
@@ -86,7 +86,7 @@ namespace Supermarket_mvp.Presenters
 
             if (!string.IsNullOrWhiteSpace(view.CategoryId) && int.TryParse(view.CategoryId, out int categoryId))
             {
-                product.Category_Id = categoryId;
+                product.CategoryId = categoryId;
             }
             else
             {
@@ -94,7 +94,7 @@ namespace Supermarket_mvp.Presenters
                 return;
             }
 
-            product.Product_Name = view.Name;
+            product.ProductName = view.Name;
 
             try
             {
@@ -126,7 +126,7 @@ namespace Supermarket_mvp.Presenters
             try
             {
                 var product = (ProductModel)productBindingSource.Current;
-                repository.Delete(product.Product_Id);
+                repository.Delete(product.ProductId);
                 view.IsSuccessful = true;
                 view.Message = "Producto eliminado correctamente.";
                 LoadAllProductList();
@@ -142,11 +142,11 @@ namespace Supermarket_mvp.Presenters
         {
             var product = (ProductModel)productBindingSource.Current;
 
-            view.Id = product.Product_Id.ToString();
-            view.Name = product.Product_Name;
-            view.Price = product.Product_Price.ToString();
-            view.Stock = product.Product_Stock.ToString();
-            view.CategoryId = product.Category_Id.ToString();
+            view.Id = product.ProductId.ToString();
+            view.Name = product.ProductName;
+            view.Price = product.ProductPrice.ToString();
+            view.Stock = product.ProductStock.ToString();
+            view.CategoryId = product.CategoryId.ToString();
 
             view.IsEdit = true;
         }
