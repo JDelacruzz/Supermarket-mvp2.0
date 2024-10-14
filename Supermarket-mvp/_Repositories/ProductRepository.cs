@@ -134,7 +134,6 @@ namespace Supermarket_mvp._Repositories
                     }
                 }
             }
-
             return productList;
         }
     }
