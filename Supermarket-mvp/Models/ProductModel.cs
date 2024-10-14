@@ -26,7 +26,7 @@ namespace Supermarket_mvp.Models
 
         [Required(ErrorMessage = "El ID de la categoría es requerido.")]
         [Range(0, 100, ErrorMessage = "El ID de la categoría debe estar entre 0 y 100.")]
-        [DisplayName("ID de la Categoría")]
+        [DisplayName("Category Id")]
         public int CategoryId { get; set; }
     }
 }

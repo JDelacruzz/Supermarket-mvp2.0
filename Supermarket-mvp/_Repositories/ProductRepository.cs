@@ -23,10 +23,10 @@ namespace Supermarket_mvp._Repositories
                 command.Connection = connection;
                 command.CommandText = @"INSERT INTO Product (Product_Name, Product_Price, Product_Stock, Category_Id)
                                         VALUES (@name, @price, @stock, @categoryId)";
-                command.Parameters.AddWithValue("@name", SqlDbType.NVarChar).Value = product.ProductName; // Nombre actualizado
-                command.Parameters.AddWithValue("@price", SqlDbType.Decimal).Value = product.ProductPrice; // Nombre actualizado
-                command.Parameters.AddWithValue("@stock", SqlDbType.Int).Value = product.ProductStock; // Nombre actualizado
-                command.Parameters.AddWithValue("@categoryId", SqlDbType.Int).Value = product.CategoryId; // Nombre actualizado
+                command.Parameters.AddWithValue("@name", SqlDbType.NVarChar).Value = product.ProductName;
+                command.Parameters.AddWithValue("@price", SqlDbType.Decimal).Value = product.ProductPrice;
+                command.Parameters.AddWithValue("@stock", SqlDbType.Int).Value = product.ProductStock;
+                command.Parameters.AddWithValue("@categoryId", SqlDbType.Int).Value = product.CategoryId;
                 command.ExecuteNonQuery();
             }
         }
@@ -59,10 +59,10 @@ namespace Supermarket_mvp._Repositories
                                             Product_Stock = @stock,
                                             Category_Id = @categoryId
                                         WHERE Product_Id = @id";
-                command.Parameters.AddWithValue("@name", SqlDbType.NVarChar).Value = product.ProductName; // Nombre actualizado
-                command.Parameters.AddWithValue("@price", SqlDbType.Decimal).Value = product.ProductPrice; // Nombre actualizado
-                command.Parameters.AddWithValue("@stock", SqlDbType.Int).Value = product.ProductStock; // Nombre actualizado
-                command.Parameters.AddWithValue("@categoryId", SqlDbType.Int).Value = product.CategoryId; // Nombre actualizado
+                command.Parameters.AddWithValue("@name", SqlDbType.NVarChar).Value = product.ProductName;
+                command.Parameters.AddWithValue("@price", SqlDbType.Decimal).Value = product.ProductPrice;
+                command.Parameters.AddWithValue("@stock", SqlDbType.Int).Value = product.ProductStock;
+                command.Parameters.AddWithValue("@categoryId", SqlDbType.Int).Value = product.CategoryId;
                 command.Parameters.AddWithValue("@id", SqlDbType.Int).Value = product.ProductId;
                 command.ExecuteNonQuery();
             }
@@ -86,11 +86,11 @@ namespace Supermarket_mvp._Repositories
                     {
                         var product = new ProductModel
                         {
-                            ProductId = (int)reader["Product_Id"], // Nombre actualizado
-                            ProductName = reader["Product_Name"].ToString(), // Nombre actualizado
-                            ProductPrice = (decimal)reader["Product_Price"], // Nombre actualizado
-                            ProductStock = (int)reader["Product_Stock"], // Nombre actualizado
-                            CategoryId = (int)reader["Category_Id"] // Nombre actualizado
+                            ProductId = (int)reader["Product_Id"],
+                            ProductName = reader["Product_Name"].ToString(),
+                            ProductPrice = (decimal)reader["Product_Price"],
+                            ProductStock = (int)reader["Product_Stock"],
+                            CategoryId = (int)reader["Category_Id"]
                         };
                         productList.Add(product);
                     }
@@ -124,11 +124,11 @@ namespace Supermarket_mvp._Repositories
                     {
                         var product = new ProductModel
                         {
-                            ProductId = (int)reader["Product_Id"], // Nombre actualizado
-                            ProductName = reader["Product_Name"].ToString(), // Nombre actualizado
-                            ProductPrice = (decimal)reader["Product_Price"], // Nombre actualizado
-                            ProductStock = (int)reader["Product_Stock"], // Nombre actualizado
-                            CategoryId = (int)reader["Category_Id"] // Nombre actualizado
+                            ProductId = (int)reader["Product_Id"],
+                            ProductName = reader["Product_Name"].ToString(),
+                            ProductPrice = (decimal)reader["Product_Price"],
+                            ProductStock = (int)reader["Product_Stock"],
+                            CategoryId = (int)reader["Category_Id"]
                         };
                         productList.Add(product);
                     }
