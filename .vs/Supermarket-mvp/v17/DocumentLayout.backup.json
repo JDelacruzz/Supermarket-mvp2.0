@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\lenovo\\documents\\c#\\visual2022\\supermarket-mvp\\supermarket-mvp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\lenovo\\documents\\c#\\visual2022\\supermarket-mvp\\supermarket-mvp\\_repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\_repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\lenovo\\documents\\c#\\visual2022\\supermarket-mvp\\supermarket-mvp\\presenters\\productpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\presenters\\productpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\lenovo\\documents\\c#\\visual2022\\supermarket-mvp\\supermarket-mvp\\presenters\\categoriespresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\presenters\\categoriespresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\lenovo\\documents\\c#\\visual2022\\supermarket-mvp\\supermarket-mvp\\models\\categoriesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1885B810-7374-4B0B-923E-9F0784CFDFB8}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\models\\categoriesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +31,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\Form1.cs",
-              "RelativeDocumentMoniker": "Supermarket-mvp\\Form1.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Supermarket-mvp\\Form1.cs [Dise\u00F1o]",
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\_Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Supermarket-mvp\\_Repositories\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\_Repositories\\ProductRepository.cs*",
+              "RelativeToolTip": "Supermarket-mvp\\_Repositories\\ProductRepository.cs*",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAswIQAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T04:15:46.655Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-10-14T03:26:15.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductPresenter.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\Presenters\\ProductPresenter.cs",
+              "RelativeDocumentMoniker": "Supermarket-mvp\\Presenters\\ProductPresenter.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\Presenters\\ProductPresenter.cs",
+              "RelativeToolTip": "Supermarket-mvp\\Presenters\\ProductPresenter.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAYwGIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T03:23:44.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriesModel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\Models\\CategoriesModel.cs",
+              "RelativeDocumentMoniker": "Supermarket-mvp\\Models\\CategoriesModel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\Models\\CategoriesModel.cs",
+              "RelativeToolTip": "Supermarket-mvp\\Models\\CategoriesModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T03:11:13.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoriesPresenter.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\Presenters\\CategoriesPresenter.cs",
+              "RelativeDocumentMoniker": "Supermarket-mvp\\Presenters\\CategoriesPresenter.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\C#\\Visual2022\\Supermarket-mvp\\Supermarket-mvp\\Presenters\\CategoriesPresenter.cs",
+              "RelativeToolTip": "Supermarket-mvp\\Presenters\\CategoriesPresenter.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAgwHsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T03:06:56.265Z",
+              "EditorCaption": ""
             }
           ]
         }
